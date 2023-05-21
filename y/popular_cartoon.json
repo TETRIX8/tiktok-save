@@ -1,0 +1,136 @@
+{
+    "data": [
+        {
+            "id": 60368,
+            "name": "Братья Супер Марио в кино",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Приключения, Фантастика, Фэнтези, Семейный, Комедия, Мелодрама",
+            "type": "Мультфильмы",
+            "country": "США, Япония",
+            "poster": "https://img.imgilall.me/movies/franchise/6/0/3/6/8/0/0/0/0/0/610x900_60368.jpg",
+            "kinopoisk": "7.3",
+            "imdb": "7.3"
+        },
+        {
+            "id": 62086,
+            "name": "Мумиёшки",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Семейный, Комедия",
+            "type": "Мультфильмы",
+            "country": "Испания",
+            "poster": "https://img.imgilall.me/movies/franchise/6/2/0/8/6/0/0/0/0/0/610x900_62086.jpg",
+            "kinopoisk": null,
+            "imdb": "5.8"
+        },
+        {
+            "id": 63124,
+            "name": "Царевны и Таинственная гостья",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Приключения, Детский",
+            "type": "Мультфильмы",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/1/2/4/0/0/0/0/0/610x900_63124.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        },
+        {
+            "id": 65395,
+            "name": "Зверогонщики",
+            "year": 2023,
+            "quality": "TS",
+            "genre": "Семейный, Спортивный, Комедия",
+            "type": "Мультфильмы",
+            "country": "США, Великобритания",
+            "poster": "https://img.imgilall.me/movies/franchise/6/5/3/9/5/0/0/0/0/0/610x900_65395.jpg",
+            "kinopoisk": null,
+            "imdb": "5.9"
+        },
+        {
+            "id": 64064,
+            "name": "Как слониха упала с неба",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Приключения, Фэнтези, Семейный, Комедия, Драма",
+            "type": "Мультфильмы",
+            "country": "США, Австралия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/0/6/4/0/0/0/0/0/610x900_64064.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        },
+        {
+            "id": 63177,
+            "name": "Бэтмен: Карающий рок над Готэмом",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Ужасы, Фэнтези",
+            "type": "Мультфильмы",
+            "country": "США",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/1/7/7/0/0/0/0/0/610x900_63177.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        },
+        {
+            "id": 63030,
+            "name": "Легион Супергероев",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Фантастика, Боевик",
+            "type": "Мультфильмы",
+            "country": "США",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/0/3/0/0/0/0/0/0/610x900_63030.jpg",
+            "kinopoisk": "5.7",
+            "imdb": "5.7"
+        },
+        {
+            "id": 64886,
+            "name": "Лига справедливости и Руби: Супергерои и охотники. Часть первая",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Фантастика, Боевик",
+            "type": "Мультфильмы",
+            "country": "США",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/8/8/6/0/0/0/0/0/610x900_64886.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        },
+        {
+            "id": 62366,
+            "name": "Турбозавры. Зимние приключения",
+            "year": 2023,
+            "quality": "TS",
+            "genre": "Семейный",
+            "type": "Мультфильмы",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/2/3/6/6/0/0/0/0/0/610x900_62366.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        },
+        {
+            "id": 63918,
+            "name": "Эмезис Блю",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Ужасы",
+            "type": "Мультфильмы",
+            "country": "США",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/9/1/8/0/0/0/0/0/610x900_63918.jpg",
+            "kinopoisk": null,
+            "imdb": "8.7"
+        },
+        {
+            "id": 65482,
+            "name": "Друзья Лего: Следующая глава: Новый старт",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Семейный",
+            "type": "Мультфильмы",
+            "country": "США",
+            "poster": "https://img.imgilall.me/movies/franchise/6/5/4/8/2/0/0/0/0/0/610x900_65482.jpg",
+            "kinopoisk": null,
+            "imdb": null
+        }
+    ]
+}

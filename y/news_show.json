@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "id": 64357,
+            "name": "Экстрасенсы. Битва сильнейших",
+            "year": 2023,
+            "quality": "SD",
+            "genre": "Документальный",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/3/5/7/0/0/0/0/0/610x900_64357.jpg",
+            "imdb": null,
+            "kinopoisk": null
+        },
+        {
+            "id": 63590,
+            "name": "Бьюти баттл",
+            "year": 2023,
+            "quality": "HD (720p)",
+            "genre": "Развлекательный",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/5/9/0/0/0/0/0/0/610x900_63590.jpeg",
+            "imdb": null,
+            "kinopoisk": null
+        },
+        {
+            "id": 64042,
+            "name": "Импровизаторы",
+            "year": 2023,
+            "quality": "SD",
+            "genre": "Комедия, Ток-шоу",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/0/4/2/0/0/0/0/0/610x900_64042.jpg",
+            "imdb": null,
+            "kinopoisk": "9.5"
+        },
+        {
+            "id": 64748,
+            "name": "Шоу Воли",
+            "year": 2023,
+            "quality": "SD",
+            "genre": "Развлекательный",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/7/4/8/0/0/0/0/0/610x900_64748.jpeg",
+            "imdb": null,
+            "kinopoisk": null
+        },
+        {
+            "id": 65389,
+            "name": "Последний, кто смеется",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Комедия",
+            "type": "ТВ-Шоу",
+            "country": "Нидерланды",
+            "poster": "https://img.imgilall.me/movies/franchise/6/5/3/8/9/0/0/0/0/0/610x900_65389.jpg",
+            "imdb": "6.9",
+            "kinopoisk": null
+        },
+        {
+            "id": 64149,
+            "name": "Умнее всех",
+            "year": 2023,
+            "quality": "SD",
+            "genre": "Семейный, Ток-шоу",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/4/1/4/9/0/0/0/0/0/610x900_64149.jpeg",
+            "imdb": null,
+            "kinopoisk": null
+        },
+        {
+            "id": 63869,
+            "name": "Большой побег",
+            "year": 2023,
+            "quality": "FHD (1080p)",
+            "genre": "Реальное ТВ",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/3/8/6/9/0/0/0/0/0/610x900_63869.jpg",
+            "imdb": null,
+            "kinopoisk": "8.5"
+        },
+        {
+            "id": 65374,
+            "name": "Наша смешная жизнь",
+            "year": 2023,
+            "quality": "SD",
+            "genre": "Развлекательный",
+            "type": "ТВ-Шоу",
+            "country": "Россия",
+            "poster": "https://img.imgilall.me/movies/franchise/6/5/3/7/4/0/0/0/0/0/610x900_65374.jpg",
+            "imdb": null,
+            "kinopoisk": null
+        }
+    ]
+}

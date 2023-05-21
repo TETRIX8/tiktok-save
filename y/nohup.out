@@ -1,0 +1,956 @@
+Task exception was never retrieved
+future: <Task finished name='Task-573' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=IntegrityError('UNIQUE constraint failed: users.user_id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 644, in send_welcome
+    db.db_table_val(user_id=message.from_user.id, user_name=message.from_user.username, user_register=current_date)
+  File "/root/y/db.py", line 9, in db_table_val
+    self.cursor.execute('INSERT INTO users (user_id, user_name, user_register) VALUES (?, ?, ?)', (user_id, user_name, user_register))
+sqlite3.IntegrityError: UNIQUE constraint failed: users.user_id
+Task exception was never retrieved
+future: <Task finished name='Task-1067' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=CantTalkWithBots("Forbidden: bot can't send messages to bots")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 2491, in send_all
+    await bot.send_message(message.from_user.id, f'❗К сожалению, ваш запрос не распознан!\n\n<a href="https://bot.kinozzz.ru/poster/error.png">🏠</a> <i>Вернитесь в <b>главное меню</b></i>.', reply_markup=exit)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 121, in check_result
+    exceptions.Unauthorized.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.CantTalkWithBots: Forbidden: bot can't send messages to bots
+Task exception was never retrieved
+future: <Task finished name='Task-1128' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=CantTalkWithBots("Forbidden: bot can't send messages to bots")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 2491, in send_all
+    await bot.send_message(message.from_user.id, f'❗К сожалению, ваш запрос не распознан!\n\n<a href="https://bot.kinozzz.ru/poster/error.png">🏠</a> <i>Вернитесь в <b>главное меню</b></i>.', reply_markup=exit)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 121, in check_result
+    exceptions.Unauthorized.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.CantTalkWithBots: Forbidden: bot can't send messages to bots
+Task exception was never retrieved
+future: <Task finished name='Task-1161' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=CantTalkWithBots("Forbidden: bot can't send messages to bots")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 2491, in send_all
+    await bot.send_message(message.from_user.id, f'❗К сожалению, ваш запрос не распознан!\n\n<a href="https://bot.kinozzz.ru/poster/error.png">🏠</a> <i>Вернитесь в <b>главное меню</b></i>.', reply_markup=exit)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 121, in check_result
+    exceptions.Unauthorized.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.CantTalkWithBots: Forbidden: bot can't send messages to bots
+Task exception was never retrieved
+future: <Task finished name='Task-1175' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=CantTalkWithBots("Forbidden: bot can't send messages to bots")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 2491, in send_all
+    await bot.send_message(message.from_user.id, f'❗К сожалению, ваш запрос не распознан!\n\n<a href="https://bot.kinozzz.ru/poster/error.png">🏠</a> <i>Вернитесь в <b>главное меню</b></i>.', reply_markup=exit)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 121, in check_result
+    exceptions.Unauthorized.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.CantTalkWithBots: Forbidden: bot can't send messages to bots
+Task exception was never retrieved
+future: <Task finished name='Task-1271' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=CantTalkWithBots("Forbidden: bot can't send messages to bots")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 2491, in send_all
+    await bot.send_message(message.from_user.id, f'❗К сожалению, ваш запрос не распознан!\n\n<a href="https://bot.kinozzz.ru/poster/error.png">🏠</a> <i>Вернитесь в <b>главное меню</b></i>.', reply_markup=exit)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 121, in check_result
+    exceptions.Unauthorized.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.CantTalkWithBots: Forbidden: bot can't send messages to bots
+Task exception was never retrieved
+future: <Task finished name='Task-1356' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Task exception was never retrieved
+future: <Task finished name='Task-1467' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Task exception was never retrieved
+future: <Task finished name='Task-1501' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Task exception was never retrieved
+future: <Task finished name='Task-1504' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Task exception was never retrieved
+future: <Task finished name='Task-1507' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Job "update_popular (trigger: cron[hour='1', minute='10'], next run at: 2023-05-22 01:10:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 184, in update_popular
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Популярное»</b> успешно завершена.\n🏅 Популярные <b>фильмы</b> и <b>сериалы</b> успешно обновлены и добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Job "update_popular_mult (trigger: cron[hour='2', minute='30'], next run at: 2023-05-22 02:30:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 265, in update_popular_mult
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Популярное»</b> успешно завершена.\n🏅 Популярные <b>мультфильмы</b> и <b>мультсериалы</b> успешно обновлены и добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Job "update_popular_anime (trigger: cron[hour='3', minute='50'], next run at: 2023-05-22 03:50:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 346, in update_popular_anime
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Популярное»</b> успешно завершена.\n🏅 Популярные <b>аниме-фильмы</b> и <b>аниме-сериалы</b> успешно обновлены и добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Job "update_popular_show (trigger: cron[hour='5', minute='40'], next run at: 2023-05-22 05:40:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 389, in update_popular_show
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Популярное»</b> успешно завершена.\n🏅 Популярные <b>ТВ-шоу</b> успешно обновлены и добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+~~~ Kinozzz Bot успешно запущен! ~~~
+❗[ 917874400 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5828633047 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5863162685 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 6009669647 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5870516595 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1966828793 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5874921513 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 6239188698 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1204698373 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1380203241 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1253315351 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5619948055 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1289763242 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1702245413 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 11111111111029527632 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+update_collections | Начинаю проверку на наличие новых подборок.
+update_collections | Проверка завершена.
+❗[ 917874400 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5863162685 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5619948055 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1966828793 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5874921513 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1380203241 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1253315351 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1204698373 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1087968824 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5870516595 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1702245413 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 5828633047 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 6009669647 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 6239188698 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 1289763242 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+❗[ 11111111111029527632 ] —  нежелательный пользователь.
+
+Советуем удалить его из базы данных.
+update_popular | Начинаю проверку на наличие новых популярных фильмов.
+update_popular | Начинаю проверку на наличие новых популярных сериалов.
+update_popular | Проверка завершена.
+update_popular | Начинаю проверку на наличие новых популярных мультфильмов.
+update_popular | Начинаю проверку на наличие новых популярных мультсериалов.
+update_popular | Проверка завершена.
+update_popular | Начинаю проверку на наличие новых популярных аниме.
+update_popular | Начинаю проверку на наличие новых популярных аниме-сериалов.
+update_popular | Проверка завершена.
+update_popular | Начинаю проверку на наличие новых популярных ТВ-шоу.
+update_popular | Проверка завершена.
+update_collections_films | Начинаю проверку на наличие новых фильмов в подборках.
+Страниц: 1
+Коллекция 68 Страница: 1
+[68, 62013, 'Любовь-морковь: Восстание машин', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/62013', 'https://img.imgilall.me/movies/franchise/6/2/0/1/3/0/0/0/0/0/610x900_62013.jpg', 'film']
+Страниц: 1
+Коллекция 69 Страница: 1
+[69, 65282, 'Топор. 1945', 'Военный, Исторический, Драма', 2023, 'https://api.strvid.ws/embed/movie/65282', 'https://img.imgilall.me/movies/franchise/6/5/2/8/2/0/0/0/0/0/610x900_65282.jpg', 'series']
+[69, 65274, 'Катюша', 'Военный, Исторический, Детектив, Драма', 2022, 'https://api.strvid.ws/embed/movie/65274', 'https://img.imgilall.me/movies/franchise/6/5/2/7/4/0/0/0/0/0/610x900_65274.jpg', 'series']
+[69, 65264, 'Расправляя крылья', 'Военный, Мелодрама', 2022, 'https://api.strvid.ws/embed/movie/65264', 'https://img.imgilall.me/movies/franchise/6/5/2/6/4/0/0/0/0/0/610x900_65264.jpg', 'film']
+[69, 64509, 'Сокровища партизанского леса', 'Приключения, Семейный, Военный', 2023, 'https://api.strvid.ws/embed/movie/64509', 'https://img.imgilall.me/movies/franchise/6/4/5/0/9/0/0/0/0/0/610x900_64509.jpg', 'film']
+[69, 65205, 'Без права на пощаду', 'Криминал', 1970, 'https://api.strvid.ws/embed/movie/65205', 'https://img.imgilall.me/movies/franchise/6/5/2/0/5/0/0/0/0/0/610x900_65205.jpg', 'series']
+[69, 65204, 'Пламя под пеплом', 'Военный, Исторический, Драма', 2021, 'https://api.strvid.ws/embed/movie/65204', 'https://img.imgilall.me/movies/franchise/6/5/2/0/4/0/0/0/0/0/610x900_65204.jpg', 'series']
+[69, 64506, 'Подрыв', 'Военный, Исторический, Драма', 2022, 'https://api.strvid.ws/embed/movie/64506', 'https://img.imgilall.me/movies/franchise/6/4/5/0/6/0/0/0/0/0/610x900_64506.jpg', 'film']
+[69, 64925, 'Позывной «Журавли»', 'Военный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64925', 'https://img.imgilall.me/movies/franchise/6/4/9/2/5/0/0/0/0/0/610x900_64925.jpg', 'series']
+[69, 64910, 'Помилование', 'Военный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64910', 'https://img.imgilall.me/movies/franchise/6/4/9/1/0/0/0/0/0/0/610x900_64910.jpg', 'film']
+[69, 63839, 'Битва за Манилу', 'Военный, Драма', 1964, 'https://api.strvid.ws/embed/movie/63839', 'https://img.imgilall.me/movies/franchise/6/3/8/3/9/0/0/0/0/0/610x900_63839.jpg', 'film']
+[69, 64006, 'Операция «Неман»', 'Военный, Исторический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64006', 'https://img.imgilall.me/movies/franchise/6/4/0/0/6/0/0/0/0/0/610x900_64006.jpg', 'series']
+[69, 63841, 'Вечная Отечественная', 'Документальный, Военный, Исторический', 2020, 'https://api.strvid.ws/embed/movie/63841', 'https://img.imgilall.me/movies/franchise/6/3/8/4/1/0/0/0/0/0/610x900_63841.jpg', 'series']
+[69, 63845, 'Смерть шпионам: Лисья нора', 'Военный, Боевик', 2012, 'https://api.strvid.ws/embed/movie/63845', 'https://img.imgilall.me/movies/franchise/6/3/8/4/5/0/0/0/0/0/610x900_63845.jpg', 'series']
+[69, 63847, 'Атака', 'Военный, Боевик, Драма', 1956, 'https://api.strvid.ws/embed/movie/63847', 'https://img.imgilall.me/movies/franchise/6/3/8/4/7/0/0/0/0/0/610x900_63847.jpg', 'film']
+[69, 63564, 'Бессмертный', 'Военный, Исторический, Боевик', 2022, 'https://api.strvid.ws/embed/movie/63564', 'https://img.imgilall.me/movies/franchise/6/3/5/6/4/0/0/0/0/0/610x900_63564.jpg', 'film']
+[69, 62373, 'Нюрнберг', 'Военный, Исторический, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/62373', 'https://img.imgilall.me/movies/franchise/6/2/3/7/3/0/0/0/0/0/610x900_62373.jpg', 'film']
+[69, 62848, 'Битва при Нарвике: Первое поражение Гитлера', 'Военный, Исторический, Драма', 2022, 'https://api.strvid.ws/embed/movie/62848', 'https://img.imgilall.me/movies/franchise/6/2/8/4/8/0/0/0/0/0/610x900_62848.jpg', 'film']
+[69, 62514, 'Праведник', 'Военный, Исторический, Драма', 2022, 'https://api.strvid.ws/embed/movie/62514', 'https://img.imgilall.me/movies/franchise/6/2/5/1/4/0/0/0/0/0/610x900_62514.jpg', 'film']
+[69, 53841, 'Беренштейн', 'Военный, Исторический, Биографический, Драма', 2021, 'https://api.strvid.ws/embed/movie/53841', 'https://img.imgilall.me/movies/franchise/5/3/8/4/1/0/0/0/0/0/610x900_53841.jpg', 'film']
+[69, 32561, 'Благословите женщину', 'Драма', 2003, 'https://api.strvid.ws/embed/movie/32561', 'https://img.imgilall.me/movies/franchise/3/2/5/6/1/0/0/0/0/0/610x900_32561.jpg', 'film']
+[69, 1554, 'Операция Валькирия', 'Военный, Исторический, Триллер, Зарубежный, Драма', 2008, 'https://api.strvid.ws/embed/movie/1554', 'https://img.imgilall.me/movies/franchise/1/5/5/4/0/0/0/0/0/0/610x900_1554.jpg', 'film']
+[69, 1017, 'Другие', 'Ужасы, Детектив, Триллер, Зарубежный, Драма', 2001, 'https://api.strvid.ws/embed/movie/1017', 'https://img.imgilall.me/movies/franchise/1/0/1/7/0/0/0/0/0/0/610x900_1017.jpg', 'film']
+[69, 772, 'Перл Харбор', 'Военный, Боевик, Зарубежный, Мелодрама, Драма', 2001, 'https://api.strvid.ws/embed/movie/772', 'https://img.imgilall.me/movies/franchise/7/7/2/0/0/0/0/0/0/0/610x900_772.jpg', 'film']
+[69, 165, 'Список Шиндлера', 'Блокбастер, Военный, Исторический, Биографический, Зарубежный, Драма', 1993, 'https://api.strvid.ws/embed/movie/165', 'https://img.imgilall.me/movies/franchise/1/6/5/0/0/0/0/0/0/0/610x900_165.jpg', 'film']
+Страниц: 1
+Коллекция 70 Страница: 1
+Страниц: 1
+Коллекция 71 Страница: 1
+[71, 57656, 'Попутчики', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/57656', 'https://img.imgilall.me/movies/franchise/5/7/6/5/6/0/0/0/0/0/610x900_57656.jpg', 'film']
+Страниц: 1
+Коллекция 73 Страница: 1
+[73, 64476, 'Бриолин: Взлёт розовых леди', 'Мюзикл, Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64476', 'https://img.imgilall.me/movies/franchise/6/4/4/7/6/0/0/0/0/0/610x900_64476.jpg', 'series']
+[73, 64285, 'Фелисити', 'Мелодрама, Драма', 1998, 'https://api.strvid.ws/embed/movie/64285', 'https://img.imgilall.me/movies/franchise/6/4/2/8/5/0/0/0/0/0/610x900_64285.jpg', 'series']
+[73, 54829, 'Рост Джоди 2', 'Семейный, Комедия, Мелодрама, Драма', 2022, 'https://api.strvid.ws/embed/movie/54829', 'https://img.imgilall.me/movies/franchise/5/4/8/2/9/0/0/0/0/0/610x900_54829.jpg', 'film']
+[73, 51923, 'Шершни', 'Ужасы, Триллер, Драма', 2021, 'https://api.strvid.ws/embed/movie/51923', 'https://img.imgilall.me/movies/franchise/5/1/9/2/3/0/0/0/0/0/610x900_51923.jpg', 'series']
+[73, 49729, 'Девочки снова сверху', 'Комедия, Мелодрама', 2004, 'https://api.strvid.ws/embed/movie/49729', 'https://img.imgilall.me/movies/franchise/4/9/7/2/9/0/0/0/0/0/610x900_49729.jpg', 'film']
+[73, 46107, 'Играй, как Бекхэм', 'Спортивный, Комедия, Мелодрама, Драма', 2002, 'https://api.strvid.ws/embed/movie/46107', 'https://img.imgilall.me/movies/franchise/4/6/1/0/7/0/0/0/0/0/610x900_46107.jpg', 'film']
+[73, 32373, 'Женский бой', 'Спортивный, Драма', 2000, 'https://api.strvid.ws/embed/movie/32373', 'https://img.imgilall.me/movies/franchise/3/2/3/7/3/0/0/0/0/0/610x900_32373.jpg', 'film']
+Страниц: 1
+Коллекция 74 Страница: 1
+[74, 64360, 'Соглашение на выпускной', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64360', 'https://img.imgilall.me/movies/franchise/6/4/3/6/0/0/0/0/0/0/610x900_64360.jpg', 'film']
+[74, 54829, 'Рост Джоди 2', 'Семейный, Комедия, Мелодрама, Драма', 2022, 'https://api.strvid.ws/embed/movie/54829', 'https://img.imgilall.me/movies/franchise/5/4/8/2/9/0/0/0/0/0/610x900_54829.jpg', 'film']
+[74, 31970, 'Опасные мысли', 'Биографический, Драма', 1995, 'https://api.strvid.ws/embed/movie/31970', 'https://img.imgilall.me/movies/franchise/3/1/9/7/0/0/0/0/0/0/610x900_31970.jpg', 'film']
+Страниц: 1
+Коллекция 75 Страница: 1
+[75, 64789, 'Команда', 'Приключения, Спортивный, Комедия, Драма', 2004, 'https://api.strvid.ws/embed/movie/64789', 'https://img.imgilall.me/movies/franchise/6/4/7/8/9/0/0/0/0/0/610x900_64789.jpg', 'series']
+[75, 63903, 'Реал Мадрид: До конца', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/63903', 'https://img.imgilall.me/movies/franchise/6/3/9/0/3/0/0/0/0/0/610x900_63903.jpg', 'series']
+[75, 63831, 'Federico Chiesa - Back on Track', 'Документальный, Биографический, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/63831', 'https://img.imgilall.me/movies/franchise/6/3/8/3/1/0/0/0/0/0/610x900_63831.jpg', 'film']
+[75, 46107, 'Играй, как Бекхэм', 'Спортивный, Комедия, Мелодрама, Драма', 2002, 'https://api.strvid.ws/embed/movie/46107', 'https://img.imgilall.me/movies/franchise/4/6/1/0/7/0/0/0/0/0/610x900_46107.jpg', 'film']
+[75, 16518, 'Эвертон: Путь Говарда', 'Документальный, Спортивный, Зарубежный', 2019, 'https://api.strvid.ws/embed/movie/16518', 'https://img.imgilall.me/movies/franchise/1/6/5/1/8/0/0/0/0/0/610x900_16518.jpg', 'film']
+Страниц: 2
+Коллекция 76 Страница: 1
+[76, 65417, 'Макгрегор навсегда', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/65417', 'https://img.imgilall.me/movies/franchise/6/5/4/1/7/0/0/0/0/0/610x900_65417.jpg', 'series']
+[76, 65193, 'Свитуотер', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/65193', 'https://img.imgilall.me/movies/franchise/6/5/1/9/3/0/0/0/0/0/610x900_65193.jpg', 'film']
+[76, 64789, 'Команда', 'Приключения, Спортивный, Комедия, Драма', 2004, 'https://api.strvid.ws/embed/movie/64789', 'https://img.imgilall.me/movies/franchise/6/4/7/8/9/0/0/0/0/0/610x900_64789.jpg', 'series']
+[76, 64728, 'Китайский пинг-понг', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64728', 'https://img.imgilall.me/movies/franchise/6/4/7/2/8/0/0/0/0/0/610x900_64728.jpg', 'film']
+[76, 64479, 'Летучий шотландец', 'Спортивный, Драма', 2006, 'https://api.strvid.ws/embed/movie/64479', 'https://img.imgilall.me/movies/franchise/6/4/4/7/9/0/0/0/0/0/610x900_64479.jpg', 'film']
+[76, 64413, 'Кроссовер', 'Семейный, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64413', 'https://img.imgilall.me/movies/franchise/6/4/4/1/3/0/0/0/0/0/610x900_64413.jpg', 'series']
+[76, 64372, 'Встань! / Стойка', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/64372', 'https://img.imgilall.me/movies/franchise/6/4/3/7/2/0/0/0/0/0/610x900_64372.jpg', 'film']
+[76, 64320, 'Ferrari 312B', 'Документальный, Исторический, Спортивный', 2017, 'https://api.strvid.ws/embed/movie/64320', 'https://img.imgilall.me/movies/franchise/6/4/3/2/0/0/0/0/0/0/610x900_64320.jpg', 'film']
+[76, 25224, 'Мистер чиббс', 'Документальный', 2017, 'https://api.strvid.ws/embed/movie/25224', 'https://img.imgilall.me/movies/franchise/2/5/2/2/4/0/0/0/0/0/610x900_25224.jpg', 'film']
+[76, 64159, 'Однажды в сентябре', 'Криминал, Документальный, Исторический', 1999, 'https://api.strvid.ws/embed/movie/64159', 'https://img.imgilall.me/movies/franchise/6/4/1/5/9/0/0/0/0/0/610x900_64159.jpg', 'film']
+[76, 63890, 'Колотушка', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63890', 'https://img.imgilall.me/movies/franchise/6/3/8/9/0/0/0/0/0/0/610x900_63890.jpg', 'series']
+[76, 55632, 'Грант Хилл', 'Документальный, Спортивный', 1996, 'https://api.strvid.ws/embed/movie/55632', 'https://img.imgilall.me/movies/franchise/5/5/6/3/2/0/0/0/0/0/610x900_55632.jpg', 'film']
+[76, 63940, 'Чемпионы', 'Спортивный, Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63940', 'https://img.imgilall.me/movies/franchise/6/3/9/4/0/0/0/0/0/0/610x900_63940.jpg', 'film']
+[76, 63925, 'Чжан может забивать', 'Семейный, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/63925', 'https://img.imgilall.me/movies/franchise/6/3/9/2/5/0/0/0/0/0/610x900_63925.jpg', 'film']
+[76, 63913, 'Джордж Форман: Несокрушимый', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/63913', 'https://img.imgilall.me/movies/franchise/6/3/9/1/3/0/0/0/0/0/610x900_63913.jpg', 'film']
+[76, 63903, 'Реал Мадрид: До конца', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/63903', 'https://img.imgilall.me/movies/franchise/6/3/9/0/3/0/0/0/0/0/610x900_63903.jpg', 'series']
+[76, 63831, 'Federico Chiesa - Back on Track', 'Документальный, Биографический, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/63831', 'https://img.imgilall.me/movies/franchise/6/3/8/3/1/0/0/0/0/0/610x900_63831.jpg', 'film']
+[76, 63297, 'Air: Большой прыжок', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63297', 'https://img.imgilall.me/movies/franchise/6/3/2/9/7/0/0/0/0/0/610x900_63297.jpg', 'film']
+[76, 63085, 'Поехавшая', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/63085', 'https://img.imgilall.me/movies/franchise/6/3/0/8/5/0/0/0/0/0/610x900_63085.jpg', 'film']
+[76, 60676, 'Крид 3', 'Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/60676', 'https://img.imgilall.me/movies/franchise/6/0/6/7/6/0/0/0/0/0/610x900_60676.jpg', 'film']
+[76, 60404, 'Родео', 'Драма', 2022, 'https://api.strvid.ws/embed/movie/60404', 'https://img.imgilall.me/movies/franchise/6/0/4/0/4/0/0/0/0/0/610x900_60404.jpg', 'film']
+[76, 51923, 'Шершни', 'Ужасы, Триллер, Драма', 2021, 'https://api.strvid.ws/embed/movie/51923', 'https://img.imgilall.me/movies/franchise/5/1/9/2/3/0/0/0/0/0/610x900_51923.jpg', 'series']
+[76, 48716, 'Для победы нужны двое', 'Мелодрама, Драма', 2021, 'https://api.strvid.ws/embed/movie/48716', 'https://img.imgilall.me/movies/franchise/4/8/7/1/6/0/0/0/0/0/610x900_48716.jpg', 'film']
+[76, 46107, 'Играй, как Бекхэм', 'Спортивный, Комедия, Мелодрама, Драма', 2002, 'https://api.strvid.ws/embed/movie/46107', 'https://img.imgilall.me/movies/franchise/4/6/1/0/7/0/0/0/0/0/610x900_46107.jpg', 'film']
+[76, 24212, 'Легенда Багера Ванса', 'Фэнтези, Спортивный, Мелодрама, Драма', 2000, 'https://api.strvid.ws/embed/movie/24212', 'https://img.imgilall.me/movies/franchise/2/4/2/1/2/0/0/0/0/0/610x900_24212.jpg', 'film']
+[76, 27970, 'Каждое воскресенье', 'Спортивный, Драма', 1999, 'https://api.strvid.ws/embed/movie/27970', 'https://img.imgilall.me/movies/franchise/2/7/9/7/0/0/0/0/0/0/610x900_27970.jpg', 'film']
+[76, 33181, 'Дни грома', 'Спортивный, Мелодрама, Драма', 1990, 'https://api.strvid.ws/embed/movie/33181', 'https://img.imgilall.me/movies/franchise/3/3/1/8/1/0/0/0/0/0/610x900_33181.jpg', 'film']
+[76, 32373, 'Женский бой', 'Спортивный, Драма', 2000, 'https://api.strvid.ws/embed/movie/32373', 'https://img.imgilall.me/movies/franchise/3/2/3/7/3/0/0/0/0/0/610x900_32373.jpg', 'film']
+[76, 30785, 'Как Майк', 'Фэнтези, Семейный, Спортивный, Комедия', 2002, 'https://api.strvid.ws/embed/movie/30785', 'https://img.imgilall.me/movies/franchise/3/0/7/8/5/0/0/0/0/0/610x900_30785.jpg', 'film']
+[76, 30219, 'Студенческая команда', 'Спортивный, Комедия, Мелодрама, Драма', 1998, 'https://api.strvid.ws/embed/movie/30219', 'https://img.imgilall.me/movies/franchise/3/0/2/1/9/0/0/0/0/0/610x900_30219.jpg', 'film']
+[76, 26681, 'Аутсайдеры', 'Семейный, Биографический, Спортивный, Комедия, Драма', 2008, 'https://api.strvid.ws/embed/movie/26681', 'https://img.imgilall.me/movies/franchise/2/6/6/8/1/0/0/0/0/0/610x900_26681.jpg', 'film']
+[76, 20174, 'Бешеный бык', 'Биографический, Спортивный, Драма', 1980, 'https://api.strvid.ws/embed/movie/20174', 'https://img.imgilall.me/movies/franchise/2/0/1/7/4/0/0/0/0/0/610x900_20174.jpg', 'film']
+[76, 19175, 'Симулянт', 'Спортивный, Комедия', 2004, 'https://api.strvid.ws/embed/movie/19175', 'https://img.imgilall.me/movies/franchise/1/9/1/7/5/0/0/0/0/0/610x900_19175.jpg', 'film']
+[76, 10122, 'Защитник', 'Биографический, Спортивный, Зарубежный, Драма', 2015, 'https://api.strvid.ws/embed/movie/10122', 'https://img.imgilall.me/movies/franchise/1/0/1/2/2/0/0/0/0/0/610x900_10122.jpg', 'film']
+[76, 7563, 'Второй шанс', 'Криминал, Спортивный, Зарубежный, Драма', 2006, 'https://api.strvid.ws/embed/movie/7563', 'https://img.imgilall.me/movies/franchise/7/5/6/3/0/0/0/0/0/0/610x900_7563.jpg', 'film']
+[76, 6571, 'Торговый пункт', 'Спортивный, Триллер, Зарубежный, Драма', 2019, 'https://api.strvid.ws/embed/movie/6571', 'https://img.imgilall.me/movies/franchise/6/5/7/1/0/0/0/0/0/0/610x900_6571.jpg', 'film']
+[76, 5622, 'Борьба с моей семьей', 'Биографический, Спортивный, Комедия, Зарубежный, Драма', 2019, 'https://api.strvid.ws/embed/movie/5622', 'https://img.imgilall.me/movies/franchise/5/6/2/2/0/0/0/0/0/0/610x900_5622.jpg', 'film']
+[76, 5602, 'Костолом', 'Спортивный, Комедия, Зарубежный, Драма', 2001, 'https://api.strvid.ws/embed/movie/5602', 'https://img.imgilall.me/movies/franchise/5/6/0/2/0/0/0/0/0/0/610x900_5602.jpg', 'film']
+[76, 4791, 'Мирный воин', 'Биографический, Спортивный, Зарубежный, Мелодрама, Драма', 2006, 'https://api.strvid.ws/embed/movie/4791', 'https://img.imgilall.me/movies/franchise/4/7/9/1/0/0/0/0/0/0/610x900_4791.jpg', 'film']
+Коллекция 76 Страница: 2
+Страниц: 1
+Коллекция 77 Страница: 1
+[77, 9627, 'Аэроплан', 'Комедия, Зарубежный', 1980, 'https://api.strvid.ws/embed/movie/9627', 'https://img.imgilall.me/movies/franchise/9/6/2/7/0/0/0/0/0/0/610x900_9627.jpg', 'film']
+Страниц: 1
+Коллекция 78 Страница: 1
+[78, 65417, 'Макгрегор навсегда', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/65417', 'https://img.imgilall.me/movies/franchise/6/5/4/1/7/0/0/0/0/0/610x900_65417.jpg', 'series']
+[78, 65311, 'Никулин. Правила жизни великого клоуна', 'Документальный, Биографический', 2022, 'https://api.strvid.ws/embed/movie/65311', 'https://img.imgilall.me/movies/franchise/6/5/3/1/1/0/0/0/0/0/610x900_65311.jpg', 'film']
+[78, 65253, 'Брижит Бардо: Искусство жить', 'Биографический', 2023, 'https://api.strvid.ws/embed/movie/65253', 'https://img.imgilall.me/movies/franchise/6/5/2/5/3/0/0/0/0/0/610x900_65253.jpg', 'series']
+[78, 65193, 'Свитуотер', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/65193', 'https://img.imgilall.me/movies/franchise/6/5/1/9/3/0/0/0/0/0/610x900_65193.jpg', 'film']
+[78, 65152, 'Эд Ширан: Сумма всего этого', 'Документальный, Биографический, Музыка', 2023, 'https://api.strvid.ws/embed/movie/65152', 'https://img.imgilall.me/movies/franchise/6/5/1/5/2/0/0/0/0/0/610x900_65152.jpg', 'series']
+[78, 64968, 'Сэм: саксонец', 'Криминал, Исторический, Биографический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64968', 'https://img.imgilall.me/movies/franchise/6/4/9/6/8/0/0/0/0/0/610x900_64968.jpg', 'series']
+[78, 64908, 'Михаил Горшенёв. Легенда о Короле и Шуте', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/64908', 'https://img.imgilall.me/movies/franchise/6/4/9/0/8/0/0/0/0/0/610x900_64908.jpg', 'series']
+[78, 64728, 'Китайский пинг-понг', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64728', 'https://img.imgilall.me/movies/franchise/6/4/7/2/8/0/0/0/0/0/610x900_64728.jpg', 'film']
+[78, 64007, 'За полчаса до весны', 'Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64007', 'https://img.imgilall.me/movies/franchise/6/4/0/0/7/0/0/0/0/0/610x900_64007.jpg', 'series']
+[78, 64479, 'Летучий шотландец', 'Спортивный, Драма', 2006, 'https://api.strvid.ws/embed/movie/64479', 'https://img.imgilall.me/movies/franchise/6/4/4/7/9/0/0/0/0/0/610x900_64479.jpg', 'film']
+[78, 64372, 'Встань! / Стойка', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/64372', 'https://img.imgilall.me/movies/franchise/6/4/3/7/2/0/0/0/0/0/610x900_64372.jpg', 'film']
+[78, 64186, 'Джонни', 'Биографический, Драма', 2022, 'https://api.strvid.ws/embed/movie/64186', 'https://img.imgilall.me/movies/franchise/6/4/1/8/6/0/0/0/0/0/610x900_64186.jpg', 'film']
+[78, 63831, 'Federico Chiesa - Back on Track', 'Документальный, Биографический, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/63831', 'https://img.imgilall.me/movies/franchise/6/3/8/3/1/0/0/0/0/0/610x900_63831.jpg', 'film']
+[78, 63297, 'Air: Большой прыжок', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63297', 'https://img.imgilall.me/movies/franchise/6/3/2/9/7/0/0/0/0/0/610x900_63297.jpg', 'film']
+[78, 63135, 'Король и Шут', 'Биографический, Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/63135', 'https://img.imgilall.me/movies/franchise/6/3/1/3/5/0/0/0/0/0/610x900_63135.jpg', 'series']
+[78, 61992, 'Осторожно, спойлер!', 'Комедия, Драма', 2022, 'https://api.strvid.ws/embed/movie/61992', 'https://img.imgilall.me/movies/franchise/6/1/9/9/2/0/0/0/0/0/610x900_61992.jpg', 'film']
+[78, 52045, 'Дуэль братьев. История Adidas и Puma', 'Исторический, Биографический, Спортивный, Драма', 2016, 'https://api.strvid.ws/embed/movie/52045', 'https://img.imgilall.me/movies/franchise/5/2/0/4/5/0/0/0/0/0/610x900_52045.jpg', 'film']
+[78, 33127, 'Селена', 'Биографический, Драма', 1997, 'https://api.strvid.ws/embed/movie/33127', 'https://img.imgilall.me/movies/franchise/3/3/1/2/7/0/0/0/0/0/610x900_33127.jpg', 'film']
+[78, 32393, 'Али', 'Биографический, Спортивный, Драма', 2001, 'https://api.strvid.ws/embed/movie/32393', 'https://img.imgilall.me/movies/franchise/3/2/3/9/3/0/0/0/0/0/610x900_32393.jpg', 'film']
+[78, 31044, 'Дорз', 'Биографический, Драма', 1991, 'https://api.strvid.ws/embed/movie/31044', 'https://img.imgilall.me/movies/franchise/3/1/0/4/4/0/0/0/0/0/610x900_31044.jpg', 'film']
+[78, 33623, 'Певец', 'Биографический, Драма', 2006, 'https://api.strvid.ws/embed/movie/33623', 'https://img.imgilall.me/movies/franchise/3/3/6/2/3/0/0/0/0/0/610x900_33623.jpg', 'film']
+[78, 28065, 'Непристойная Бетти Пейдж', 'Биографический, Драма', 2005, 'https://api.strvid.ws/embed/movie/28065', 'https://img.imgilall.me/movies/franchise/2/8/0/6/5/0/0/0/0/0/610x900_28065.jpg', 'film']
+[78, 4791, 'Мирный воин', 'Биографический, Спортивный, Зарубежный, Мелодрама, Драма', 2006, 'https://api.strvid.ws/embed/movie/4791', 'https://img.imgilall.me/movies/franchise/4/7/9/1/0/0/0/0/0/0/610x900_4791.jpg', 'film']
+[78, 528, 'Гонка', 'Биографический, Спортивный, Зарубежный, Драма', 2013, 'https://api.strvid.ws/embed/movie/528', 'https://img.imgilall.me/movies/franchise/5/2/8/0/0/0/0/0/0/0/610x900_528.jpg', 'film']
+Страниц: 1
+Коллекция 79 Страница: 1
+[79, 63251, 'Гекльберри Финн', 'Приключения, Мюзикл, Семейный', 1974, 'https://api.strvid.ws/embed/movie/63251', 'https://img.imgilall.me/movies/franchise/6/3/2/5/1/0/0/0/0/0/610x900_63251.jpg', 'film']
+[79, 63249, 'Том Сойер', 'Приключения, Мюзикл, Семейный', 1973, 'https://api.strvid.ws/embed/movie/63249', 'https://img.imgilall.me/movies/franchise/6/3/2/4/9/0/0/0/0/0/610x900_63249.jpg', 'film']
+[79, 64646, 'Великий чемпион', 'Семейный, Комедия', 2002, 'https://api.strvid.ws/embed/movie/64646', 'https://img.imgilall.me/movies/franchise/6/4/6/4/6/0/0/0/0/0/610x900_64646.jpg', 'film']
+[79, 64149, 'Умнее всех', 'Семейный, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/64149', 'https://img.imgilall.me/movies/franchise/6/4/1/4/9/0/0/0/0/0/610x900_64149.jpeg', 'tv-show']
+[79, 43716, 'Палмер', 'Драма', 2021, 'https://api.strvid.ws/embed/movie/43716', 'https://img.imgilall.me/movies/franchise/4/3/7/1/6/0/0/0/0/0/610x900_43716.jpg', 'film']
+[79, 28790, 'Няньки', 'Криминал, Семейный, Комедия', 1994, 'https://api.strvid.ws/embed/movie/28790', 'https://img.imgilall.me/movies/franchise/2/8/7/9/0/0/0/0/0/0/610x900_28790.jpg', 'film']
+[79, 13632, 'Дельфин Берни 2', 'Семейный, Комедия, Боевик', 2019, 'https://api.strvid.ws/embed/movie/13632', 'https://img.imgilall.me/movies/franchise/1/3/6/3/2/0/0/0/0/0/610x900_13632.jpg', 'film']
+[79, 7434, 'Мой шпион', 'Комедия, Боевик, Зарубежный', 2019, 'https://api.strvid.ws/embed/movie/7434', 'https://img.imgilall.me/movies/franchise/7/4/3/4/0/0/0/0/0/0/610x900_7434.jpg', 'film']
+[79, 8428, 'Дельфин Берни', 'Семейный, Комедия, Боевик, Зарубежный', 2018, 'https://api.strvid.ws/embed/movie/8428', 'https://img.imgilall.me/movies/franchise/8/4/2/8/0/0/0/0/0/0/610x900_8428.jpg', 'film']
+[79, 995, 'Третий акт / Волшебство Бэль Айл', 'Комедия, Зарубежный, Драма', 2012, 'https://api.strvid.ws/embed/movie/995', 'https://img.imgilall.me/movies/franchise/9/9/5/0/0/0/0/0/0/0/610x900_995.jpg', 'film']
+Страниц: 1
+Коллекция 80 Страница: 1
+Страниц: 1
+Коллекция 81 Страница: 1
+[81, 65418, 'Семья Сталлоне', 'Документальный, Семейный, Реальное ТВ', 2023, 'https://api.strvid.ws/embed/movie/65418', 'https://img.imgilall.me/movies/franchise/6/5/4/1/8/0/0/0/0/0/610x900_65418.jpg', 'series']
+[81, 65417, 'Макгрегор навсегда', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/65417', 'https://img.imgilall.me/movies/franchise/6/5/4/1/7/0/0/0/0/0/610x900_65417.jpg', 'series']
+[81, 65253, 'Брижит Бардо: Искусство жить', 'Биографический', 2023, 'https://api.strvid.ws/embed/movie/65253', 'https://img.imgilall.me/movies/franchise/6/5/2/5/3/0/0/0/0/0/610x900_65253.jpg', 'series']
+[81, 65152, 'Эд Ширан: Сумма всего этого', 'Документальный, Биографический, Музыка', 2023, 'https://api.strvid.ws/embed/movie/65152', 'https://img.imgilall.me/movies/franchise/6/5/1/5/2/0/0/0/0/0/610x900_65152.jpg', 'series']
+[81, 64908, 'Михаил Горшенёв. Легенда о Короле и Шуте', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/64908', 'https://img.imgilall.me/movies/franchise/6/4/9/0/8/0/0/0/0/0/610x900_64908.jpg', 'series']
+[81, 64174, '95-я церемония вручения премии «Оскар»', 'Документальный, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/64174', 'https://img.imgilall.me/movies/franchise/6/4/1/7/4/0/0/0/0/0/610x900_64174.jpg', 'film']
+[81, 63831, 'Federico Chiesa - Back on Track', 'Документальный, Биографический, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/63831', 'https://img.imgilall.me/movies/franchise/6/3/8/3/1/0/0/0/0/0/610x900_63831.jpg', 'film']
+[81, 63135, 'Король и Шут', 'Биографический, Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/63135', 'https://img.imgilall.me/movies/franchise/6/3/1/3/5/0/0/0/0/0/610x900_63135.jpg', 'series']
+[81, 31044, 'Дорз', 'Биографический, Драма', 1991, 'https://api.strvid.ws/embed/movie/31044', 'https://img.imgilall.me/movies/franchise/3/1/0/4/4/0/0/0/0/0/610x900_31044.jpg', 'film']
+[81, 2384, 'Голос улиц', 'Биографический, Зарубежный, Драма', 2015, 'https://api.strvid.ws/embed/movie/2384', 'https://img.imgilall.me/movies/franchise/2/3/8/4/0/0/0/0/0/0/610x900_2384.jpg', 'film']
+Страниц: 1
+Коллекция 82 Страница: 1
+[82, 65198, 'Моя жена и дети', 'Семейный, Комедия', 2001, 'https://api.strvid.ws/embed/movie/65198', 'https://img.imgilall.me/movies/franchise/6/5/1/9/8/0/0/0/0/0/610x900_65198.jpg', 'series']
+[82, 64474, 'Друг на час', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/64474', 'https://img.imgilall.me/movies/franchise/6/4/4/7/4/0/0/0/0/0/610x900_64474.jpg', 'series']
+[82, 64282, 'Сражения солдата Келли', 'Комедия, Мелодрама, Драма', 2003, 'https://api.strvid.ws/embed/movie/64282', 'https://img.imgilall.me/movies/franchise/6/4/2/8/2/0/0/0/0/0/610x900_64282.jpg', 'film']
+[82, 63120, 'Идеальный брат', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/63120', 'https://img.imgilall.me/movies/franchise/6/3/1/2/0/0/0/0/0/0/610x900_63120.jpg', 'film']
+[82, 63734, 'Моя мама — шпион', 'Приключения, Комедия', 2023, 'https://api.strvid.ws/embed/movie/63734', 'https://img.imgilall.me/movies/franchise/6/3/7/3/4/0/0/0/0/0/610x900_63734.jpg', 'series']
+[82, 63105, 'Папы против мам', 'Семейный, Комедия', 2022, 'https://api.strvid.ws/embed/movie/63105', 'https://img.imgilall.me/movies/franchise/6/3/1/0/5/0/0/0/0/0/610x900_63105.jpg', 'film']
+[82, 63106, 'Эта любовь', 'Комедия, Мелодрама', 2022, 'https://api.strvid.ws/embed/movie/63106', 'https://img.imgilall.me/movies/franchise/6/3/1/0/6/0/0/0/0/0/610x900_63106.jpg', 'film']
+[82, 49728, 'Девочки сверху', 'Комедия', 2001, 'https://api.strvid.ws/embed/movie/49728', 'https://img.imgilall.me/movies/franchise/4/9/7/2/8/0/0/0/0/0/610x900_49728.jpg', 'film']
+[82, 49729, 'Девочки снова сверху', 'Комедия, Мелодрама', 2004, 'https://api.strvid.ws/embed/movie/49729', 'https://img.imgilall.me/movies/franchise/4/9/7/2/9/0/0/0/0/0/610x900_49729.jpg', 'film']
+[82, 31657, 'Парикмахерская', 'Комедия, Драма', 2002, 'https://api.strvid.ws/embed/movie/31657', 'https://img.imgilall.me/movies/franchise/3/1/6/5/7/0/0/0/0/0/610x900_31657.jpg', 'film']
+[82, 26681, 'Аутсайдеры', 'Семейный, Биографический, Спортивный, Комедия, Драма', 2008, 'https://api.strvid.ws/embed/movie/26681', 'https://img.imgilall.me/movies/franchise/2/6/6/8/1/0/0/0/0/0/610x900_26681.jpg', 'film']
+[82, 31211, 'Мертвец в колледже', 'Комедия', 1998, 'https://api.strvid.ws/embed/movie/31211', 'https://img.imgilall.me/movies/franchise/3/1/2/1/1/0/0/0/0/0/610x900_31211.jpg', 'film']
+[82, 21987, 'Следующая пятница', 'Комедия', 1999, 'https://api.strvid.ws/embed/movie/21987', 'https://img.imgilall.me/movies/franchise/2/1/9/8/7/0/0/0/0/0/610x900_21987.jpg', 'film']
+[82, 21676, 'Старски и Хатч', 'Криминал, Комедия', 2004, 'https://api.strvid.ws/embed/movie/21676', 'https://img.imgilall.me/movies/franchise/2/1/6/7/6/0/0/0/0/0/610x900_21676.jpg', 'film']
+[82, 21507, 'Кровью и потом: Анаболики', 'Криминал, Комедия, Боевик, Триллер', 2013, 'https://api.strvid.ws/embed/movie/21507', 'https://img.imgilall.me/movies/franchise/2/1/5/0/7/0/0/0/0/0/610x900_21507.jpg', 'film']
+[82, 12843, 'Пятница', 'Комедия, Драма', 1995, 'https://api.strvid.ws/embed/movie/12843', 'https://img.imgilall.me/movies/franchise/1/2/8/4/3/0/0/0/0/0/610x900_12843.jpg', 'film']
+[82, 12256, 'Белые цыпочки', 'Криминал, Комедия, Зарубежный', 2004, 'https://api.strvid.ws/embed/movie/12256', 'https://img.imgilall.me/movies/franchise/1/2/2/5/6/0/0/0/0/0/610x900_12256.jpg', 'film']
+[82, 1085, 'Мы – Миллеры', 'Криминал, Комедия, Зарубежный', 2013, 'https://api.strvid.ws/embed/movie/1085', 'https://img.imgilall.me/movies/franchise/1/0/8/5/0/0/0/0/0/0/610x900_1085.jpg', 'film']
+Страниц: 1
+Коллекция 83 Страница: 1
+Страниц: 1
+Коллекция 87 Страница: 1
+Страниц: 1
+Коллекция 88 Страница: 1
+Страниц: 1
+Коллекция 91 Страница: 1
+Страниц: 1
+Коллекция 92 Страница: 1
+Страниц: 1
+Коллекция 93 Страница: 1
+Страниц: 1
+Коллекция 94 Страница: 1
+[94, 65395, 'Зверогонщики', 'Семейный, Спортивный, Комедия', 2023, 'https://api.strvid.ws/embed/movie/65395', 'https://img.imgilall.me/movies/franchise/6/5/3/9/5/0/0/0/0/0/610x900_65395.jpg', 'cartoon']
+[94, 64320, 'Ferrari 312B', 'Документальный, Исторический, Спортивный', 2017, 'https://api.strvid.ws/embed/movie/64320', 'https://img.imgilall.me/movies/franchise/6/4/3/2/0/0/0/0/0/0/610x900_64320.jpg', 'film']
+[94, 63338, 'Форсаж 10', 'Криминал, Детектив, Боевик', 2023, 'https://api.strvid.ws/embed/movie/63338', 'https://img.imgilall.me/movies/franchise/6/3/3/3/8/0/0/0/0/0/610x900_63338.jpg', 'film']
+[94, 60404, 'Родео', 'Драма', 2022, 'https://api.strvid.ws/embed/movie/60404', 'https://img.imgilall.me/movies/franchise/6/0/4/0/4/0/0/0/0/0/610x900_60404.jpg', 'film']
+[94, 33181, 'Дни грома', 'Спортивный, Мелодрама, Драма', 1990, 'https://api.strvid.ws/embed/movie/33181', 'https://img.imgilall.me/movies/franchise/3/3/1/8/1/0/0/0/0/0/610x900_33181.jpg', 'film']
+[94, 6571, 'Торговый пункт', 'Спортивный, Триллер, Зарубежный, Драма', 2019, 'https://api.strvid.ws/embed/movie/6571', 'https://img.imgilall.me/movies/franchise/6/5/7/1/0/0/0/0/0/0/610x900_6571.jpg', 'film']
+Страниц: 1
+Коллекция 95 Страница: 1
+Страниц: 1
+Коллекция 96 Страница: 1
+[96, 56695, 'Три тысячи лет желаний', 'Фэнтези, Мелодрама, Драма', 2022, 'https://api.strvid.ws/embed/movie/56695', 'https://img.imgilall.me/movies/franchise/5/6/6/9/5/0/0/0/0/0/610x900_56695.jpg', 'film']
+[96, 3424, 'Помешанный на времени', 'Фантастика, Комедия, Мелодрама, Драма', 2018, 'https://api.strvid.ws/embed/movie/3424', 'https://img.imgilall.me/movies/franchise/3/4/2/4/0/0/0/0/0/0/610x900_3424.jpg', 'film']
+Страниц: 1
+Коллекция 97 Страница: 1
+[97, 64854, 'Сантехники Белого дома', 'Исторический, Биографический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64854', 'https://img.imgilall.me/movies/franchise/6/4/8/5/4/0/0/0/0/0/610x900_64854.jpg', 'series']
+[97, 64266, 'Любовь и смерть', 'Криминал, Исторический, Биографический, Детектив, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64266', 'https://img.imgilall.me/movies/franchise/6/4/2/6/6/0/0/0/0/0/610x900_64266.jpg', 'series']
+[97, 25883, 'Лжец, Великий и Ужасный', 'Криминал, Биографический, Драма', 2017, 'https://api.strvid.ws/embed/movie/25883', 'https://img.imgilall.me/movies/franchise/2/5/8/8/3/0/0/0/0/0/610x900_25883.jpg', 'film']
+[97, 28065, 'Непристойная Бетти Пейдж', 'Биографический, Драма', 2005, 'https://api.strvid.ws/embed/movie/28065', 'https://img.imgilall.me/movies/franchise/2/8/0/6/5/0/0/0/0/0/610x900_28065.jpg', 'film']
+[97, 15708, 'Тэмпл Грандин', 'Биографический, Зарубежный, Драма', 2010, 'https://api.strvid.ws/embed/movie/15708', 'https://img.imgilall.me/movies/franchise/1/5/7/0/8/0/0/0/0/0/610x900_15708.jpg', 'film']
+Страниц: 1
+Коллекция 98 Страница: 1
+[98, 33306, 'Город призраков', 'Фэнтези, Комедия, Мелодрама, Драма', 2008, 'https://api.strvid.ws/embed/movie/33306', 'https://img.imgilall.me/movies/franchise/3/3/3/0/6/0/0/0/0/0/610x900_33306.jpg', 'film']
+Страниц: 1
+Коллекция 99 Страница: 1
+[99, 58362, 'Подземелья и драконы: Воровская честь', 'Приключения, Фэнтези, Комедия, Боевик', 2023, 'https://api.strvid.ws/embed/movie/58362', 'https://img.imgilall.me/movies/franchise/5/8/3/6/2/0/0/0/0/0/610x900_58362.jpg', 'film']
+Страниц: 1
+Коллекция 100 Страница: 1
+[100, 64043, 'Неотложка', 'Драма', 2003, 'https://api.strvid.ws/embed/movie/64043', 'https://img.imgilall.me/movies/franchise/6/4/0/4/3/0/0/0/0/0/610x900_64043.jpg', 'series']
+[100, 63571, 'Восьмой участок', 'Мелодрама', 2022, 'https://api.strvid.ws/embed/movie/63571', 'https://img.imgilall.me/movies/franchise/6/3/5/7/1/0/0/0/0/0/610x900_63571.jpg', 'series']
+Страниц: 1
+Коллекция 101 Страница: 1
+[101, 65464, 'Великаны планеты', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/65464', 'https://img.imgilall.me/movies/franchise/6/5/4/6/4/0/0/0/0/0/610x900_65464.jpg', 'series']
+[101, 65194, 'Квак и Жаб', 'Приключения, Фэнтези, Короткометражный, Семейный, Комедия', 2023, 'https://api.strvid.ws/embed/movie/65194', 'https://img.imgilall.me/movies/franchise/6/5/1/9/4/0/0/0/0/0/610x900_65194.jpg', 'cartoon-series']
+[101, 60887, 'Высокое напряжение', 'Фантастика, Семейный', 2022, 'https://api.strvid.ws/embed/movie/60887', 'https://img.imgilall.me/movies/franchise/6/0/8/8/7/0/0/0/0/0/610x900_60887.jpg', 'series']
+[101, 64821, 'Город в огне', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/64821', 'https://img.imgilall.me/movies/franchise/6/4/8/2/1/0/0/0/0/0/610x900_64821.jpg', 'series']
+[101, 64473, 'Джейн', 'Короткометражный', 2022, 'https://api.strvid.ws/embed/movie/64473', 'https://img.imgilall.me/movies/franchise/6/4/4/7/3/0/0/0/0/0/610x900_64473.jpg', 'series']
+[101, 64480, 'Капли Бога', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/64480', 'https://img.imgilall.me/movies/franchise/6/4/4/8/0/0/0/0/0/0/610x900_64480.jpg', 'series']
+[101, 63912, 'Последнее, что он сказал мне', 'Триллер', 2023, 'https://api.strvid.ws/embed/movie/63912', 'https://img.imgilall.me/movies/franchise/6/3/9/1/2/0/0/0/0/0/610x900_63912.jpg', 'series']
+[101, 63886, 'Предсказание', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/63886', 'https://img.imgilall.me/movies/franchise/6/3/8/8/6/0/0/0/0/0/610x900_63886.jpg', 'series']
+[101, 63834, 'Бункер', 'Фантастика, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/63834', 'https://img.imgilall.me/movies/franchise/6/3/8/3/4/0/0/0/0/0/610x900_63834.jpg', 'series']
+[101, 63833, 'Без ответа', 'Приключения, Боевик, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/63833', 'https://img.imgilall.me/movies/franchise/6/3/8/3/3/0/0/0/0/0/610x900_63833.jpg', 'film']
+[101, 63750, 'Тетрис', 'Исторический, Биографический, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/63750', 'https://img.imgilall.me/movies/franchise/6/3/7/5/0/0/0/0/0/0/610x900_63750.jpg', 'film']
+[101, 63409, 'Экстраполяции', 'Детектив, Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63409', 'https://img.imgilall.me/movies/franchise/6/3/4/0/9/0/0/0/0/0/610x900_63409.jpg', 'series']
+Страниц: 1
+Коллекция 102 Страница: 1
+[102, 65484, 'Друзья мамы Сьюзан', 'Ужасы, Триллер', 2023, 'https://api.strvid.ws/embed/movie/65484', 'https://img.imgilall.me/movies/franchise/6/5/4/8/4/0/0/0/0/0/610x900_65484.jpg', 'film']
+[102, 65389, 'Последний, кто смеется', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65389', 'https://img.imgilall.me/movies/franchise/6/5/3/8/9/0/0/0/0/0/610x900_65389.jpg', 'tv-show']
+[102, 65226, 'День матери отменяется', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65226', 'https://img.imgilall.me/movies/franchise/6/5/2/2/6/0/0/0/0/0/610x900_65226.jpg', 'film']
+[102, 64847, 'Связанные насмерть', 'Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64847', 'https://img.imgilall.me/movies/franchise/6/4/8/4/7/0/0/0/0/0/610x900_64847.jpg', 'series']
+[102, 64834, 'Вecёлaя мaмa', 'Комедия, Драма', 2022, 'https://api.strvid.ws/embed/movie/64834', 'https://img.imgilall.me/movies/franchise/6/4/8/3/4/0/0/0/0/0/610x900_64834.jpg', 'film']
+[102, 64344, 'Сила', 'Фэнтези, Драма', 2023, 'https://api.strvid.ws/embed/movie/64344', 'https://img.imgilall.me/movies/franchise/6/4/3/4/4/0/0/0/0/0/610x900_64344.jpg', 'series']
+[102, 64337, 'На одном крыле', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/64337', 'https://img.imgilall.me/movies/franchise/6/4/3/3/7/0/0/0/0/0/610x900_64337.jpg', 'film']
+[102, 64203, 'Нет ничего лучше Парижа', 'Мелодрама, Драма', 2022, 'https://api.strvid.ws/embed/movie/64203', 'https://img.imgilall.me/movies/franchise/6/4/2/0/3/0/0/0/0/0/610x900_64203.jpg', 'film']
+[102, 64044, 'Выпуск 07', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/64044', 'https://img.imgilall.me/movies/franchise/6/4/0/4/4/0/0/0/0/0/610x900_64044.jpg', 'series']
+[102, 63942, 'Танго, текила и капелька лжи', 'Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/63942', 'https://img.imgilall.me/movies/franchise/6/3/9/4/2/0/0/0/0/0/610x900_63942.jpg', 'film']
+[102, 63870, 'Цитадель', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63870', 'https://img.imgilall.me/movies/franchise/6/3/8/7/0/0/0/0/0/0/610x900_63870.jpg', 'series']
+[102, 63831, 'Federico Chiesa - Back on Track', 'Документальный, Биографический, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/63831', 'https://img.imgilall.me/movies/franchise/6/3/8/3/1/0/0/0/0/0/610x900_63831.jpg', 'film']
+[102, 63818, 'Жажда жизни', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/63818', 'https://img.imgilall.me/movies/franchise/6/3/8/1/8/0/0/0/0/0/610x900_63818.jpg', 'film']
+[102, 63802, 'Сайен', 'Боевик', 2023, 'https://api.strvid.ws/embed/movie/63802', 'https://img.imgilall.me/movies/franchise/6/3/8/0/2/0/0/0/0/0/610x900_63802.jpg', 'film']
+[102, 63731, 'Сутенёры', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63731', 'https://img.imgilall.me/movies/franchise/6/3/7/3/1/0/0/0/0/0/610x900_63731.jpg', 'series']
+[102, 63634, 'Увидишь во сне', 'Мелодрама', 2022, 'https://api.strvid.ws/embed/movie/63634', 'https://img.imgilall.me/movies/franchise/6/3/6/3/4/0/0/0/0/0/610x900_63634.jpg', 'film']
+[102, 63297, 'Air: Большой прыжок', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63297', 'https://img.imgilall.me/movies/franchise/6/3/2/9/7/0/0/0/0/0/610x900_63297.jpg', 'film']
+[102, 63287, 'Дейзи Джонс и The Six', 'Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/63287', 'https://img.imgilall.me/movies/franchise/6/3/2/8/7/0/0/0/0/0/610x900_63287.jpg', 'series']
+[102, 56083, 'Десять процентов', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/56083', 'https://img.imgilall.me/movies/franchise/5/6/0/8/3/0/0/0/0/0/610x900_56083.jpg', 'series']
+Страниц: 1
+Коллекция 103 Страница: 1
+[103, 64640, 'Сын стрелка / Сын киллера', 'Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64640', 'https://img.imgilall.me/movies/franchise/6/4/6/4/0/0/0/0/0/0/610x900_64640.jpg', 'series']
+[103, 64551, 'Гюльджемаль', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/64551', 'https://img.imgilall.me/movies/franchise/6/4/5/5/1/0/0/0/0/0/610x900_64551.jpg', 'series']
+[103, 63675, 'Меня зовут Фарах', 'Криминал, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/63675', 'https://img.imgilall.me/movies/franchise/6/3/6/7/5/0/0/0/0/0/610x900_63675.jpg', 'series']
+Страниц: 1
+Коллекция 104 Страница: 1
+[104, 65393, 'Убийства в Стилтауне', 'Криминал, Исторический, Драма', 2023, 'https://api.strvid.ws/embed/movie/65393', 'https://img.imgilall.me/movies/franchise/6/5/3/9/3/0/0/0/0/0/610x900_65393.jpg', 'series']
+[104, 64108, 'Как действуют наркотики', 'Документальный', 2011, 'https://api.strvid.ws/embed/movie/64108', 'https://img.imgilall.me/movies/franchise/6/4/1/0/8/0/0/0/0/0/610x900_64108.jpg', 'series']
+[104, 63337, 'Золото', 'Криминал, Драма', 2023, 'https://api.strvid.ws/embed/movie/63337', 'https://img.imgilall.me/movies/franchise/6/3/3/3/7/0/0/0/0/0/610x900_63337.jpg', 'series']
+[104, 55192, 'Сильверпоинт', 'Фантастика', 2022, 'https://api.strvid.ws/embed/movie/55192', 'https://img.imgilall.me/movies/franchise/5/5/1/9/2/0/0/0/0/0/610x900_55192.jpg', 'series']
+Страниц: 1
+Коллекция 105 Страница: 1
+[105, 65097, 'Маленький огонёк', 'Военный, Исторический, Биографический, Драма', 2023, 'https://api.strvid.ws/embed/movie/65097', 'https://img.imgilall.me/movies/franchise/6/5/0/9/7/0/0/0/0/0/610x900_65097.jpg', 'series']
+[105, 64972, 'Секунды до катастрофы', 'Документальный', 2004, 'https://api.strvid.ws/embed/movie/64972', 'https://img.imgilall.me/movies/franchise/6/4/9/7/2/0/0/0/0/0/610x900_64972.jpg', 'series']
+Страниц: 1
+Коллекция 106 Страница: 1
+Страниц: 1
+Коллекция 107 Страница: 1
+Страниц: 1
+Коллекция 108 Страница: 1
+[108, 65390, 'Звездный суд', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65390', 'https://img.imgilall.me/movies/franchise/6/5/3/9/0/0/0/0/0/0/610x900_65390.jpg', 'series']
+[108, 65262, 'Неприличные деньги', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65262', 'https://img.imgilall.me/movies/franchise/6/5/2/6/2/0/0/0/0/0/610x900_65262.jpg', 'series']
+[108, 65017, 'Галустян +', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65017', 'https://img.imgilall.me/movies/franchise/6/5/0/1/7/0/0/0/0/0/610x900_65017.jpg', 'series']
+[108, 64474, 'Друг на час', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/64474', 'https://img.imgilall.me/movies/franchise/6/4/4/7/4/0/0/0/0/0/610x900_64474.jpg', 'series']
+[108, 64357, 'Экстрасенсы. Битва сильнейших', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/64357', 'https://img.imgilall.me/movies/franchise/6/4/3/5/7/0/0/0/0/0/610x900_64357.jpg', 'tv-show']
+[108, 63733, 'Кафе «Куба»', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/63733', 'https://img.imgilall.me/movies/franchise/6/3/7/3/3/0/0/0/0/0/610x900_63733.jpg', 'series']
+[108, 13344, 'Орлеан', 'Комедия, Триллер', 2015, 'https://api.strvid.ws/embed/movie/13344', 'https://img.imgilall.me/movies/franchise/1/3/3/4/4/0/0/0/0/0/610x900_13344.jpg', 'film']
+Страниц: 1
+Коллекция 109 Страница: 1
+[109, 64907, 'Дурная кровь', 'Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64907', 'https://img.imgilall.me/movies/franchise/6/4/9/0/7/0/0/0/0/0/610x900_64907.jpg', 'series']
+Страниц: 1
+Коллекция 110 Страница: 1
+Страниц: 1
+Коллекция 111 Страница: 1
+Страниц: 1
+Коллекция 112 Страница: 1
+Страниц: 1
+Коллекция 113 Страница: 1
+Страниц: 1
+Коллекция 114 Страница: 1
+[114, 64159, 'Однажды в сентябре', 'Криминал, Документальный, Исторический', 1999, 'https://api.strvid.ws/embed/movie/64159', 'https://img.imgilall.me/movies/franchise/6/4/1/5/9/0/0/0/0/0/610x900_64159.jpg', 'film']
+[114, 63738, 'Гинденбург', 'Приключения, Исторический, Триллер, Драма', 1975, 'https://api.strvid.ws/embed/movie/63738', 'https://img.imgilall.me/movies/franchise/6/3/7/3/8/0/0/0/0/0/610x900_63738.jpg', 'film']
+[114, 62883, 'Заклинатели слонов', 'Документальный, Короткометражный', 2022, 'https://api.strvid.ws/embed/movie/62883', 'https://img.imgilall.me/movies/franchise/6/2/8/8/3/0/0/0/0/0/610x900_62883.jpg', 'film']
+[114, 62888, 'Прощание по-ирландски', 'Короткометражный, Комедия, Драма', 2022, 'https://api.strvid.ws/embed/movie/62888', 'https://img.imgilall.me/movies/franchise/6/2/8/8/8/0/0/0/0/0/610x900_62888.jpg', 'film']
+[114, 62456, 'Говорят женщины', 'Драма', 2022, 'https://api.strvid.ws/embed/movie/62456', 'https://img.imgilall.me/movies/franchise/6/2/4/5/6/0/0/0/0/0/610x900_62456.jpg', 'film']
+[114, 62019, 'Мальчик, крот, лис и лошадь', 'Семейный', 2022, 'https://api.strvid.ws/embed/movie/62019', 'https://img.imgilall.me/movies/franchise/6/2/0/1/9/0/0/0/0/0/610x900_62019.jpg', 'cartoon']
+[114, 59584, 'На Западном фронте без перемен', 'Военный, Исторический, Боевик, Драма', 2022, 'https://api.strvid.ws/embed/movie/59584', 'https://img.imgilall.me/movies/franchise/5/9/5/8/4/0/0/0/0/0/610x900_59584.jpg', 'film']
+[114, 58463, 'Чёрная Пантера: Ваканда навсегда', 'Приключения, Фантастика, Боевик, Триллер, Драма', 2022, 'https://api.strvid.ws/embed/movie/58463', 'https://img.imgilall.me/movies/franchise/5/8/4/6/3/0/0/0/0/0/610x900_58463.jpg', 'film']
+[114, 55121, 'RRR: Рядом ревёт революция', 'Исторический, Боевик, Драма', 2022, 'https://api.strvid.ws/embed/movie/55121', 'https://img.imgilall.me/movies/franchise/5/5/1/2/1/0/0/0/0/0/610x900_55121.jpg', 'film']
+[114, 54458, 'Навальный', 'Документальный, Биографический, Триллер', 2022, 'https://api.strvid.ws/embed/movie/54458', 'https://img.imgilall.me/movies/franchise/5/4/4/5/8/0/0/0/0/0/610x900_54458.jpg', 'film']
+[114, 53599, 'Всё везде и сразу', 'Приключения, Фантастика, Фэнтези, Комедия', 2022, 'https://api.strvid.ws/embed/movie/53599', 'https://img.imgilall.me/movies/franchise/5/3/5/9/9/0/0/0/0/0/610x900_53599.jpg', 'film']
+[114, 44783, 'Дорогой баскетбол', 'Короткометражный, Биографический, Спортивный', 2017, 'https://api.strvid.ws/embed/movie/44783', 'https://img.imgilall.me/movies/franchise/4/4/7/8/3/0/0/0/0/0/610x900_44783.jpg', 'cartoon']
+[114, 43722, 'Аватар: Путь воды', 'Приключения, Фантастика, Боевик, Триллер', 2022, 'https://api.strvid.ws/embed/movie/43722', 'https://img.imgilall.me/movies/franchise/4/3/7/2/2/0/0/0/0/0/610x900_43722.jpg', 'film']
+[114, 30633, 'Энни Холл', 'Комедия, Мелодрама', 1977, 'https://api.strvid.ws/embed/movie/30633', 'https://img.imgilall.me/movies/franchise/3/0/6/3/3/0/0/0/0/0/610x900_30633.jpg', 'film']
+[114, 20174, 'Бешеный бык', 'Биографический, Спортивный, Драма', 1980, 'https://api.strvid.ws/embed/movie/20174', 'https://img.imgilall.me/movies/franchise/2/0/1/7/4/0/0/0/0/0/610x900_20174.jpg', 'film']
+[114, 13558, 'Топ Ган: Мэверик', 'Боевик, Зарубежный, Драма', 2022, 'https://api.strvid.ws/embed/movie/13558', 'https://img.imgilall.me/movies/franchise/1/3/5/5/8/0/0/0/0/0/610x900_13558.jpg', 'film']
+[114, 13720, 'Пиноккио Гильермо дель Торо', 'Фэнтези, Мюзикл', 2021, 'https://api.strvid.ws/embed/movie/13720', 'https://img.imgilall.me/movies/franchise/1/3/7/2/0/0/0/0/0/0/610x900_13720.jpg', 'cartoon']
+[114, 6524, 'Принц Египта', 'Детский, Полнометражный, Зарубежный', 1998, 'https://api.strvid.ws/embed/movie/6524', 'https://img.imgilall.me/movies/franchise/6/5/2/4/0/0/0/0/0/0/610x900_6524.jpg', 'cartoon']
+[114, 5275, 'Человек-волк', 'Ужасы, Триллер, Зарубежный, Драма', 2010, 'https://api.strvid.ws/embed/movie/5275', 'https://img.imgilall.me/movies/franchise/5/2/7/5/0/0/0/0/0/0/610x900_5275.jpg', 'film']
+[114, 772, 'Перл Харбор', 'Военный, Боевик, Зарубежный, Мелодрама, Драма', 2001, 'https://api.strvid.ws/embed/movie/772', 'https://img.imgilall.me/movies/franchise/7/7/2/0/0/0/0/0/0/0/610x900_772.jpg', 'film']
+[114, 511, 'Москва слезам не верит', 'Русский, Комедия, Мелодрама, Драма', 1980, 'https://api.strvid.ws/embed/movie/511', 'https://img.imgilall.me/movies/franchise/5/1/1/0/0/0/0/0/0/0/610x900_511.jpg', 'film']
+[114, 441, 'Пианист', 'Военный, Исторический, Биографический, Зарубежный, Драма', 2002, 'https://api.strvid.ws/embed/movie/441', 'https://img.imgilall.me/movies/franchise/4/4/1/0/0/0/0/0/0/0/610x900_441.jpg', 'film']
+Страниц: 2
+Коллекция 115 Страница: 1
+[115, 65454, 'О! Ён-щим', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/65454', 'https://img.imgilall.me/movies/franchise/6/5/4/5/4/0/0/0/0/0/610x900_65454.jpg', 'series']
+[115, 65335, 'Гонка', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/65335', 'https://img.imgilall.me/movies/franchise/6/5/3/3/5/0/0/0/0/0/610x900_65335.jpg', 'series']
+[115, 65200, 'Всё, что мы любили', 'Мелодрама, Драма', 2023, 'https://api.strvid.ws/embed/movie/65200', 'https://img.imgilall.me/movies/franchise/6/5/2/0/0/0/0/0/0/0/610x900_65200.jpg', 'series']
+[115, 65083, 'Мы встретились случайно', 'Фэнтези, Детектив, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/65083', 'https://img.imgilall.me/movies/franchise/6/5/0/8/3/0/0/0/0/0/610x900_65083.jpg', 'series']
+[115, 65040, 'Бумажная луна', 'Детектив, Драма', 2023, 'https://api.strvid.ws/embed/movie/65040', 'https://img.imgilall.me/movies/franchise/6/5/0/4/0/0/0/0/0/0/610x900_65040.jpg', 'series']
+[115, 65041, 'Семья', 'Комедия, Боевик', 2023, 'https://api.strvid.ws/embed/movie/65041', 'https://img.imgilall.me/movies/franchise/6/5/0/4/1/0/0/0/0/0/610x900_65041.jpg', 'series']
+[115, 64791, 'Доктор Чха', 'Комедия, Мелодрама, Драма', 2023, 'https://api.strvid.ws/embed/movie/64791', 'https://img.imgilall.me/movies/franchise/6/4/7/9/1/0/0/0/0/0/610x900_64791.jpg', 'series']
+[115, 64657, 'Бора! Дебора', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64657', 'https://img.imgilall.me/movies/franchise/6/4/6/5/7/0/0/0/0/0/610x900_64657.jpg', 'series']
+[115, 64383, 'Листмейстер', 'Драма, Музыка', 2016, 'https://api.strvid.ws/embed/movie/64383', 'https://img.imgilall.me/movies/franchise/6/4/3/8/3/0/0/0/0/0/610x900_64383.jpg', 'series']
+[115, 64382, 'Чосонский адвокат', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/64382', 'https://img.imgilall.me/movies/franchise/6/4/3/8/2/0/0/0/0/0/610x900_64382.jpg', 'series']
+[115, 53991, 'Необщительный босс', 'Комедия, Мелодрама', 2017, 'https://api.strvid.ws/embed/movie/53991', 'https://img.imgilall.me/movies/franchise/5/3/9/9/1/0/0/0/0/0/610x900_53991.jpg', 'series']
+[115, 64088, 'Белое Рождество', 'Криминал, Детектив, Триллер, Драма', 2011, 'https://api.strvid.ws/embed/movie/64088', 'https://img.imgilall.me/movies/franchise/6/4/0/8/8/0/0/0/0/0/610x900_64088.jpg', 'series']
+[115, 63937, 'Пандора: Фальшивый рай', 'Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/63937', 'https://img.imgilall.me/movies/franchise/6/3/9/3/7/0/0/0/0/0/610x900_63937.jpg', 'series']
+[115, 63882, 'Оазис', 'Мелодрама, Драма', 2023, 'https://api.strvid.ws/embed/movie/63882', 'https://img.imgilall.me/movies/franchise/6/3/8/8/2/0/0/0/0/0/610x900_63882.jpg', 'series']
+[115, 63827, 'Самый лучший хит', 'Комедия, Мелодрама, Музыка', 2017, 'https://api.strvid.ws/embed/movie/63827', 'https://img.imgilall.me/movies/franchise/6/3/8/2/7/0/0/0/0/0/610x900_63827.jpg', 'series']
+[115, 63778, 'Адвокат по разводам Щин', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63778', 'https://img.imgilall.me/movies/franchise/6/3/7/7/8/0/0/0/0/0/610x900_63778.jpg', 'series']
+[115, 63754, 'Курьер', 'Фэнтези, Комедия', 2023, 'https://api.strvid.ws/embed/movie/63754', 'https://img.imgilall.me/movies/franchise/6/3/7/5/4/0/0/0/0/0/610x900_63754.jpg', 'series']
+Коллекция 115 Страница: 2
+Страниц: 1
+Коллекция 116 Страница: 1
+[116, 65141, 'Спасти единственного сына', 'Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/65141', 'https://img.imgilall.me/movies/franchise/6/5/1/4/1/0/0/0/0/0/610x900_65141.jpg', 'series']
+[116, 64477, 'Дыхание мёртвого леса', 'Драма', 2022, 'https://api.strvid.ws/embed/movie/64477', 'https://img.imgilall.me/movies/franchise/6/4/4/7/7/0/0/0/0/0/610x900_64477.jpg', 'film']
+[116, 60929, 'Лиза', 'Мелодрама, Драма', 2022, 'https://api.strvid.ws/embed/movie/60929', 'https://img.imgilall.me/movies/franchise/6/0/9/2/9/0/0/0/0/0/610x900_60929.jpg', 'film']
+Страниц: 1
+Коллекция 117 Страница: 1
+[117, 65394, 'Юность', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65394', 'https://img.imgilall.me/movies/franchise/6/5/3/9/4/0/0/0/0/0/610x900_65394.jpg', 'series']
+[117, 65300, 'Обратный отсчёт', 'Реальное ТВ', 2023, 'https://api.strvid.ws/embed/movie/65300', 'https://img.imgilall.me/movies/franchise/6/5/3/0/0/0/0/0/0/0/610x900_65300.jpg', 'tv-show']
+[117, 64909, 'Фактор страха: Испытание тайгой', 'Реальное ТВ', 2022, 'https://api.strvid.ws/embed/movie/64909', 'https://img.imgilall.me/movies/franchise/6/4/9/0/9/0/0/0/0/0/610x900_64909.jpg', 'tv-show']
+[117, 64187, 'Битва каверов', 'Реальное ТВ, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64187', 'https://img.imgilall.me/movies/franchise/6/4/1/8/7/0/0/0/0/0/610x900_64187.jpg', 'tv-show']
+[117, 64042, 'Импровизаторы', 'Комедия, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/64042', 'https://img.imgilall.me/movies/franchise/6/4/0/4/2/0/0/0/0/0/610x900_64042.jpg', 'tv-show']
+[117, 63869, 'Большой побег', 'Реальное ТВ', 2023, 'https://api.strvid.ws/embed/movie/63869', 'https://img.imgilall.me/movies/franchise/6/3/8/6/9/0/0/0/0/0/610x900_63869.jpg', 'tv-show']
+[117, 63879, 'На выход', 'Реальное ТВ', 2023, 'https://api.strvid.ws/embed/movie/63879', 'https://img.imgilall.me/movies/franchise/6/3/8/7/9/0/0/0/0/0/610x900_63879.jpg', 'tv-show']
+[117, 63734, 'Моя мама — шпион', 'Приключения, Комедия', 2023, 'https://api.strvid.ws/embed/movie/63734', 'https://img.imgilall.me/movies/franchise/6/3/7/3/4/0/0/0/0/0/610x900_63734.jpg', 'series']
+Страниц: 1
+Коллекция 118 Страница: 1
+[118, 65490, 'Белые люди не умеют прыгать', 'Спортивный, Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/65490', 'https://img.imgilall.me/movies/franchise/6/5/4/9/0/0/0/0/0/0/610x900_65490.jpg', 'film']
+[118, 65287, 'Тройничок', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/65287', 'https://img.imgilall.me/movies/franchise/6/5/2/8/7/0/0/0/0/0/610x900_65287.jpg', 'film']
+[118, 65295, "Класс '09", 'Криминал, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/65295', 'https://img.imgilall.me/movies/franchise/6/5/2/9/5/0/0/0/0/0/610x900_65295.jpg', 'series']
+[118, 64470, 'Прекрасные мелочи', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/64470', 'https://img.imgilall.me/movies/franchise/6/4/4/7/0/0/0/0/0/0/610x900_64470.jpg', 'series']
+[118, 65053, 'Часики', 'Ужасы, Триллер', 2023, 'https://api.strvid.ws/embed/movie/65053', 'https://img.imgilall.me/movies/franchise/6/5/0/5/3/0/0/0/0/0/610x900_65053.jpg', 'film']
+[118, 64968, 'Сэм: саксонец', 'Криминал, Исторический, Биографический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64968', 'https://img.imgilall.me/movies/franchise/6/4/9/6/8/0/0/0/0/0/610x900_64968.jpg', 'series']
+[118, 64967, 'Остров Сент-Икс', 'Детектив, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64967', 'https://img.imgilall.me/movies/franchise/6/4/9/6/7/0/0/0/0/0/610x900_64967.jpg', 'series']
+[118, 64866, 'Квази', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/64866', 'https://img.imgilall.me/movies/franchise/6/4/8/6/6/0/0/0/0/0/610x900_64866.jpg', 'film']
+[118, 64688, 'Тут наверху', 'Мюзикл, Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64688', 'https://img.imgilall.me/movies/franchise/6/4/6/8/8/0/0/0/0/0/610x900_64688.jpg', 'series']
+[118, 64249, 'Балет сегодня', 'Документальный', 2018, 'https://api.strvid.ws/embed/movie/64249', 'https://img.imgilall.me/movies/franchise/6/4/2/4/9/0/0/0/0/0/610x900_64249.jpg', 'film']
+[118, 64096, 'Больше надежды', 'Исторический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64096', 'https://img.imgilall.me/movies/franchise/6/4/0/9/6/0/0/0/0/0/610x900_64096.jpg', 'series']
+[118, 64066, 'Бостонский душитель', 'Криминал, Исторический, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64066', 'https://img.imgilall.me/movies/franchise/6/4/0/6/6/0/0/0/0/0/610x900_64066.jpg', 'film']
+[118, 63904, 'Снова на воле', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/63904', 'https://img.imgilall.me/movies/franchise/6/3/9/0/4/0/0/0/0/0/610x900_63904.jpg', 'series']
+[118, 63608, 'Качок', 'Драма', 2022, 'https://api.strvid.ws/embed/movie/63608', 'https://img.imgilall.me/movies/franchise/6/3/6/0/8/0/0/0/0/0/610x900_63608.jpg', 'film']
+Страниц: 1
+Коллекция 119 Страница: 1
+[119, 65079, 'О чём говорят мужчины. Простые удовольствия', 'Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/65079', 'https://img.imgilall.me/movies/franchise/6/5/0/7/9/0/0/0/0/0/610x900_65079.jpg', 'series']
+[119, 64007, 'За полчаса до весны', 'Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64007', 'https://img.imgilall.me/movies/franchise/6/4/0/0/7/0/0/0/0/0/610x900_64007.jpg', 'series']
+[119, 64005, 'Жить жизнь', 'Триллер', 2023, 'https://api.strvid.ws/embed/movie/64005', 'https://img.imgilall.me/movies/franchise/6/4/0/0/5/0/0/0/0/0/610x900_64005.jpg', 'series']
+Страниц: 1
+Коллекция 120 Страница: 1
+[120, 65174, 'Можно ваш телефончик?', 'Развлекательный', 2020, 'https://api.strvid.ws/embed/movie/65174', 'https://img.imgilall.me/movies/franchise/6/5/1/7/4/0/0/0/0/0/610x900_65174.jpeg', 'tv-show']
+[120, 65017, 'Галустян +', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65017', 'https://img.imgilall.me/movies/franchise/6/5/0/1/7/0/0/0/0/0/610x900_65017.jpg', 'series']
+[120, 64474, 'Друг на час', 'Комедия', 2022, 'https://api.strvid.ws/embed/movie/64474', 'https://img.imgilall.me/movies/franchise/6/4/4/7/4/0/0/0/0/0/610x900_64474.jpg', 'series']
+[120, 64579, 'На дне', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/64579', 'https://img.imgilall.me/movies/franchise/6/4/5/7/9/0/0/0/0/0/610x900_64579.jpg', 'series']
+[120, 63890, 'Колотушка', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63890', 'https://img.imgilall.me/movies/franchise/6/3/8/9/0/0/0/0/0/0/610x900_63890.jpg', 'series']
+[120, 64102, 'Хочу перемен', 'Реальное ТВ', 2023, 'https://api.strvid.ws/embed/movie/64102', 'https://img.imgilall.me/movies/franchise/6/4/1/0/2/0/0/0/0/0/610x900_64102.jpeg', 'tv-show']
+[120, 64052, 'Вкусно с Ляйсан', 'Развлекательный, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/64052', 'https://img.imgilall.me/movies/franchise/6/4/0/5/2/0/0/0/0/0/610x900_64052.jpg', 'tv-show']
+[120, 63735, 'Вторая линия', 'Криминал, Детектив, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/63735', 'https://img.imgilall.me/movies/franchise/6/3/7/3/5/0/0/0/0/0/610x900_63735.jpg', 'series']
+[120, 63733, 'Кафе «Куба»', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/63733', 'https://img.imgilall.me/movies/franchise/6/3/7/3/3/0/0/0/0/0/610x900_63733.jpg', 'series']
+Страниц: 1
+Коллекция 121 Страница: 1
+[121, 63251, 'Гекльберри Финн', 'Приключения, Мюзикл, Семейный', 1974, 'https://api.strvid.ws/embed/movie/63251', 'https://img.imgilall.me/movies/franchise/6/3/2/5/1/0/0/0/0/0/610x900_63251.jpg', 'film']
+[121, 63249, 'Том Сойер', 'Приключения, Мюзикл, Семейный', 1973, 'https://api.strvid.ws/embed/movie/63249', 'https://img.imgilall.me/movies/franchise/6/3/2/4/9/0/0/0/0/0/610x900_63249.jpg', 'film']
+[121, 65152, 'Эд Ширан: Сумма всего этого', 'Документальный, Биографический, Музыка', 2023, 'https://api.strvid.ws/embed/movie/65152', 'https://img.imgilall.me/movies/franchise/6/5/1/5/2/0/0/0/0/0/610x900_65152.jpg', 'series']
+[121, 65146, 'Знаменитые братья Бейкер', 'Комедия, Мелодрама, Драма, Музыка', 1989, 'https://api.strvid.ws/embed/movie/65146', 'https://img.imgilall.me/movies/franchise/6/5/1/4/6/0/0/0/0/0/610x900_65146.jpg', 'film']
+[121, 64908, 'Михаил Горшенёв. Легенда о Короле и Шуте', 'Документальный', 2023, 'https://api.strvid.ws/embed/movie/64908', 'https://img.imgilall.me/movies/franchise/6/4/9/0/8/0/0/0/0/0/610x900_64908.jpg', 'series']
+[121, 64679, 'Удовлетворение', 'Комедия, Мелодрама, Музыка', 1988, 'https://api.strvid.ws/embed/movie/64679', 'https://img.imgilall.me/movies/franchise/6/4/6/7/9/0/0/0/0/0/610x900_64679.jpg', 'film']
+[121, 64680, 'Баджа Оклахома', 'Комедия, Мелодрама, Драма, Музыка', 1988, 'https://api.strvid.ws/embed/movie/64680', 'https://img.imgilall.me/movies/franchise/6/4/6/8/0/0/0/0/0/0/610x900_64680.jpg', 'film']
+[121, 64007, 'За полчаса до весны', 'Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64007', 'https://img.imgilall.me/movies/franchise/6/4/0/0/7/0/0/0/0/0/610x900_64007.jpg', 'series']
+[121, 64525, 'Рождение легенд', 'Мюзикл, Биографический, Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64525', 'https://img.imgilall.me/movies/franchise/6/4/5/2/5/0/0/0/0/0/610x900_64525.jpg', 'film']
+[121, 64476, 'Бриолин: Взлёт розовых леди', 'Мюзикл, Комедия, Мелодрама', 2023, 'https://api.strvid.ws/embed/movie/64476', 'https://img.imgilall.me/movies/franchise/6/4/4/7/6/0/0/0/0/0/610x900_64476.jpg', 'series']
+[121, 64415, 'Ослиная шкура', 'Фэнтези, Мюзикл, Мелодрама, Драма', 1970, 'https://api.strvid.ws/embed/movie/64415', 'https://img.imgilall.me/movies/franchise/6/4/4/1/5/0/0/0/0/0/610x900_64415.jpg', 'film']
+[121, 64300, 'Это — Spinal Tap', 'Комедия, Музыка', 1984, 'https://api.strvid.ws/embed/movie/64300', 'https://img.imgilall.me/movies/franchise/6/4/3/0/0/0/0/0/0/0/610x900_64300.jpg', 'film']
+[121, 64187, 'Битва каверов', 'Реальное ТВ, Музыка', 2023, 'https://api.strvid.ws/embed/movie/64187', 'https://img.imgilall.me/movies/franchise/6/4/1/8/7/0/0/0/0/0/610x900_64187.jpg', 'tv-show']
+[121, 64062, 'Maestro', 'Криминал, Детектив, Драма', 2022, 'https://api.strvid.ws/embed/movie/64062', 'https://img.imgilall.me/movies/franchise/6/4/0/6/2/0/0/0/0/0/610x900_64062.jpg', 'series']
+[121, 63287, 'Дейзи Джонс и The Six', 'Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/63287', 'https://img.imgilall.me/movies/franchise/6/3/2/8/7/0/0/0/0/0/610x900_63287.jpg', 'series']
+[121, 63135, 'Король и Шут', 'Биографический, Драма, Музыка', 2023, 'https://api.strvid.ws/embed/movie/63135', 'https://img.imgilall.me/movies/franchise/6/3/1/3/5/0/0/0/0/0/610x900_63135.jpg', 'series']
+[121, 62622, 'Супер Майк: Последний танец', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/62622', 'https://img.imgilall.me/movies/franchise/6/2/6/2/2/0/0/0/0/0/610x900_62622.jpg', 'film']
+[121, 55544, 'Пианистка', 'Детектив, Триллер, Мелодрама', 2022, 'https://api.strvid.ws/embed/movie/55544', 'https://img.imgilall.me/movies/franchise/5/5/5/4/4/0/0/0/0/0/610x900_55544.jpg', 'series']
+[121, 50113, 'Поток. Александр Гудков и новая музыкальная комедия', 'Документальный, Биографический', 2020, 'https://api.strvid.ws/embed/movie/50113', 'https://img.imgilall.me/movies/franchise/5/0/1/1/3/0/0/0/0/0/610x900_50113.jpeg', 'film']
+[121, 46295, 'Бриолин 2', 'Мюзикл, Комедия, Мелодрама, Драма', 1982, 'https://api.strvid.ws/embed/movie/46295', 'https://img.imgilall.me/movies/franchise/4/6/2/9/5/0/0/0/0/0/610x900_46295.jpg', 'film']
+[121, 36612, 'В ярких красках', 'Комедия', 1990, 'https://api.strvid.ws/embed/movie/36612', 'https://img.imgilall.me/movies/franchise/3/6/6/1/2/0/0/0/0/0/610x900_36612.jpg', 'series']
+[121, 25712, 'Бриолин', 'Мюзикл, Мелодрама', 1978, 'https://api.strvid.ws/embed/movie/25712', 'https://img.imgilall.me/movies/franchise/2/5/7/1/2/0/0/0/0/0/610x900_25712.jpg', 'film']
+[121, 34322, 'Camp Rock: Музыкальные каникулы', 'Мюзикл, Семейный, Комедия, Мелодрама', 2008, 'https://api.strvid.ws/embed/movie/34322', 'https://img.imgilall.me/movies/franchise/3/4/3/2/2/0/0/0/0/0/610x900_34322.jpg', 'film']
+[121, 33127, 'Селена', 'Биографический, Драма', 1997, 'https://api.strvid.ws/embed/movie/33127', 'https://img.imgilall.me/movies/franchise/3/3/1/2/7/0/0/0/0/0/610x900_33127.jpg', 'film']
+[121, 33072, 'Лак для волос', 'Мюзикл, Комедия, Мелодрама, Драма', 2007, 'https://api.strvid.ws/embed/movie/33072', 'https://img.imgilall.me/movies/franchise/3/3/0/7/2/0/0/0/0/0/610x900_33072.jpg', 'film']
+[121, 31044, 'Дорз', 'Биографический, Драма', 1991, 'https://api.strvid.ws/embed/movie/31044', 'https://img.imgilall.me/movies/franchise/3/1/0/4/4/0/0/0/0/0/610x900_31044.jpg', 'film']
+[121, 33623, 'Певец', 'Биографический, Драма', 2006, 'https://api.strvid.ws/embed/movie/33623', 'https://img.imgilall.me/movies/franchise/3/3/6/2/3/0/0/0/0/0/610x900_33623.jpg', 'film']
+[121, 24207, 'Евровидение: История огненной саги', 'Комедия, Зарубежный', 2020, 'https://api.strvid.ws/embed/movie/24207', 'https://img.imgilall.me/movies/franchise/2/4/2/0/7/0/0/0/0/0/610x900_24207.jpg', 'film']
+[121, 23090, 'СиБи 4: Четвертый подряд', 'Комедия', 1993, 'https://api.strvid.ws/embed/movie/23090', 'https://img.imgilall.me/movies/franchise/2/3/0/9/0/0/0/0/0/0/610x900_23090.jpg', 'film']
+[121, 20653, 'Camp Rock 2: Отчетный концерт', 'Мюзикл, Семейный, Комедия, Мелодрама', 2010, 'https://api.strvid.ws/embed/movie/20653', 'https://img.imgilall.me/movies/franchise/2/0/6/5/3/0/0/0/0/0/610x900_20653.jpg', 'film']
+[121, 16010, 'Ассистент звезды', 'Зарубежный, Мелодрама, Драма', 2020, 'https://api.strvid.ws/embed/movie/16010', 'https://img.imgilall.me/movies/franchise/1/6/0/1/0/0/0/0/0/0/610x900_16010.jpg', 'film']
+[121, 15329, 'Рок на века', 'Мюзикл, Комедия, Зарубежный, Мелодрама', 2012, 'https://api.strvid.ws/embed/movie/15329', 'https://img.imgilall.me/movies/franchise/1/5/3/2/9/0/0/0/0/0/610x900_15329.jpg', 'film']
+[121, 14874, 'Бурлеск', 'Мюзикл, Зарубежный, Мелодрама, Драма', 2010, 'https://api.strvid.ws/embed/movie/14874', 'https://img.imgilall.me/movies/franchise/1/4/8/7/4/0/0/0/0/0/610x900_14874.jpg', 'film']
+[121, 5699, 'Рэй', 'Биографический, Зарубежный, Драма', 2004, 'https://api.strvid.ws/embed/movie/5699', 'https://img.imgilall.me/movies/franchise/5/6/9/9/0/0/0/0/0/0/610x900_5699.jpg', 'film']
+[121, 2384, 'Голос улиц', 'Биографический, Зарубежный, Драма', 2015, 'https://api.strvid.ws/embed/movie/2384', 'https://img.imgilall.me/movies/franchise/2/3/8/4/0/0/0/0/0/0/610x900_2384.jpg', 'film']
+[121, 969, 'Уличный кот по кличке Боб', 'Семейный, Биографический, Комедия, Зарубежный, Драма', 2016, 'https://api.strvid.ws/embed/movie/969', 'https://img.imgilall.me/movies/franchise/9/6/9/0/0/0/0/0/0/0/610x900_969.jpg', 'film']
+[121, 441, 'Пианист', 'Военный, Исторический, Биографический, Зарубежный, Драма', 2002, 'https://api.strvid.ws/embed/movie/441', 'https://img.imgilall.me/movies/franchise/4/4/1/0/0/0/0/0/0/0/610x900_441.jpg', 'film']
+Страниц: 1
+Коллекция 122 Страница: 1
+[122, 65193, 'Свитуотер', 'Биографический, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/65193', 'https://img.imgilall.me/movies/franchise/6/5/1/9/3/0/0/0/0/0/610x900_65193.jpg', 'film']
+[122, 64413, 'Кроссовер', 'Семейный, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/64413', 'https://img.imgilall.me/movies/franchise/6/4/4/1/3/0/0/0/0/0/610x900_64413.jpg', 'series']
+[122, 64372, 'Встань! / Стойка', 'Документальный, Спортивный', 2023, 'https://api.strvid.ws/embed/movie/64372', 'https://img.imgilall.me/movies/franchise/6/4/3/7/2/0/0/0/0/0/610x900_64372.jpg', 'film']
+[122, 25224, 'Мистер чиббс', 'Документальный', 2017, 'https://api.strvid.ws/embed/movie/25224', 'https://img.imgilall.me/movies/franchise/2/5/2/2/4/0/0/0/0/0/610x900_25224.jpg', 'film']
+[122, 55632, 'Грант Хилл', 'Документальный, Спортивный', 1996, 'https://api.strvid.ws/embed/movie/55632', 'https://img.imgilall.me/movies/franchise/5/5/6/3/2/0/0/0/0/0/610x900_55632.jpg', 'film']
+[122, 63940, 'Чемпионы', 'Спортивный, Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63940', 'https://img.imgilall.me/movies/franchise/6/3/9/4/0/0/0/0/0/0/610x900_63940.jpg', 'film']
+[122, 63925, 'Чжан может забивать', 'Семейный, Спортивный, Драма', 2023, 'https://api.strvid.ws/embed/movie/63925', 'https://img.imgilall.me/movies/franchise/6/3/9/2/5/0/0/0/0/0/610x900_63925.jpg', 'film']
+[122, 63297, 'Air: Большой прыжок', 'Драма', 2023, 'https://api.strvid.ws/embed/movie/63297', 'https://img.imgilall.me/movies/franchise/6/3/2/9/7/0/0/0/0/0/610x900_63297.jpg', 'film']
+[122, 23680, 'Округ баскетбола: Это в воде', 'Документальный, Зарубежный', 2020, 'https://api.strvid.ws/embed/movie/23680', 'https://img.imgilall.me/movies/franchise/2/3/6/8/0/0/0/0/0/0/610x900_23680.jpg', 'film']
+Страниц: 1
+Коллекция 123 Страница: 1
+Страниц: 1
+Коллекция 124 Страница: 1
+[124, 64854, 'Сантехники Белого дома', 'Исторический, Биографический, Драма', 2023, 'https://api.strvid.ws/embed/movie/64854', 'https://img.imgilall.me/movies/franchise/6/4/8/5/4/0/0/0/0/0/610x900_64854.jpg', 'series']
+[124, 64697, 'Верните Алисию', 'Детектив, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64697', 'https://img.imgilall.me/movies/franchise/6/4/6/9/7/0/0/0/0/0/610x900_64697.jpg', 'series']
+[124, 64266, 'Любовь и смерть', 'Криминал, Исторический, Биографический, Детектив, Триллер, Драма', 2023, 'https://api.strvid.ws/embed/movie/64266', 'https://img.imgilall.me/movies/franchise/6/4/2/6/6/0/0/0/0/0/610x900_64266.jpg', 'series']
+[124, 63830, 'Мокрые псы', 'Комедия, Драма', 2023, 'https://api.strvid.ws/embed/movie/63830', 'https://img.imgilall.me/movies/franchise/6/3/8/3/0/0/0/0/0/0/610x900_63830.jpg', 'series']
+[124, 63681, 'Марлон Уайанс: Бог любит меня', 'Комедия, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/63681', 'https://img.imgilall.me/movies/franchise/6/3/6/8/1/0/0/0/0/0/610x900_63681.jpg', 'film']
+Страниц: 1
+Коллекция 125 Страница: 1
+[125, 64484, 'Еда, которая построила Америку', 'Документальный, Исторический', 2019, 'https://api.strvid.ws/embed/movie/64484', 'https://img.imgilall.me/movies/franchise/6/4/4/8/4/0/0/0/0/0/610x900_64484.jpg', 'series']
+[125, 64052, 'Вкусно с Ляйсан', 'Развлекательный, Ток-шоу', 2023, 'https://api.strvid.ws/embed/movie/64052', 'https://img.imgilall.me/movies/franchise/6/4/0/5/2/0/0/0/0/0/610x900_64052.jpg', 'tv-show']
+[125, 63977, 'Гуру кухни', 'Развлекательный', 2023, 'https://api.strvid.ws/embed/movie/63977', 'https://img.imgilall.me/movies/franchise/6/3/9/7/7/0/0/0/0/0/610x900_63977.jpg', 'tv-show']
+[125, 63589, 'Здравствуй, сладкий', 'Развлекательный', 2023, 'https://api.strvid.ws/embed/movie/63589', 'https://img.imgilall.me/movies/franchise/6/3/5/8/9/0/0/0/0/0/610x900_63589.jpeg', 'tv-show']
+[125, 63588, 'Кулинарные детективы', 'Развлекательный', 2023, 'https://api.strvid.ws/embed/movie/63588', 'https://img.imgilall.me/movies/franchise/6/3/5/8/8/0/0/0/0/0/610x900_63588.jpeg', 'tv-show']
+Страниц: 1
+Коллекция 126 Страница: 1
+[126, 61112, 'Облака Чернобыля', 'Исторический, Триллер, Драма', 2022, 'https://api.strvid.ws/embed/movie/61112', 'https://img.imgilall.me/movies/franchise/6/1/1/1/2/0/0/0/0/0/610x900_61112.jpg', 'film']
+Страниц: 1
+Коллекция 127 Страница: 1
+[127, 65178, 'Ничегошеньки', 'Комедия', 2023, 'https://api.strvid.ws/embed/movie/65178', 'https://img.imgilall.me/movies/franchise/6/5/1/7/8/0/0/0/0/0/610x900_65178.jpg', 'series']
+Job "update_collections_films (trigger: cron[hour='7', minute='10'], next run at: 2023-05-22 07:10:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 631, in update_collections_films
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Обновление раздела <b>«Подборки»</b> успешно завершено.\n🎬 Добавлено: <b>{new_films_count}</b> видео.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Task exception was never retrieved
+future: <Task finished name='Task-64' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=KeyError('id')>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/y/main.py", line 1688, in handle_text
+    film_id = response['id']
+KeyError: 'id'
+Job "update_news_films (trigger: cron[hour='11', minute='16'], next run at: 2023-05-22 11:16:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 451, in update_news_films
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Новинки»</b> успешно завершена.\n🆕 Новые <b>фильмы</b> добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Job "update_news_serials (trigger: cron[hour='12', minute='29'], next run at: 2023-05-22 12:29:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 503, in update_news_serials
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Новинки»</b> успешно завершена.\n🆕 Новые <b>сериалы</b> добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
+Job "update_news_show (trigger: cron[hour='13', minute='18'], next run at: 2023-05-22 13:18:00 MSK)" raised an exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/apscheduler/executors/base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+  File "/root/y/main.py", line 555, in update_news_show
+    await bot.send_message(chat_id=chatid, text=f'✅ <b>{current_date}</b> | Проверка раздела <b>«Новинки»</b> успешно завершена.\n🆕 Новые <b>ТВ-шоу</b> добавлены.\n\n👉 @kinozzz_new_bot')
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/bot.py", line 346, in send_message
+    result = await self.request(api.Methods.SEND_MESSAGE, payload)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/bot/api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "/usr/local/lib/python3.10/dist-packages/aiogram/utils/exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.ChatNotFound: Chat not found
