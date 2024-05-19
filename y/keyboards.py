@@ -71,7 +71,7 @@ category.add(InlineKeyboardButton(text="ТВ-Шоу", callback_data="tv"))
 category.add(InlineKeyboardButton(text="◀️ Назад", callback_data="back"))
 
 contacts = InlineKeyboardMarkup()
-contacts.add(InlineKeyboardButton(text="🤝 для рекламы сюда" , url="https://t.me/evloewww"))
+contacts.add(InlineKeyboardButton(text="🤝 для рекламы сюда" , url="https://t.me/TETRIX.UNO"))
 contacts.add(InlineKeyboardButton(text="◀️ Назад", callback_data="back"))
 
 about = InlineKeyboardMarkup()
