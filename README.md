@@ -59,3 +59,8 @@ pip install -r requirements.txt
 Ссылка на видео: https://tikcdn.io/ssstik/7417164034744814853
 Ссылка на музыку: https://tikcdn.io/ssstik/music_link_here
 ```
+# Загрузчик видео TikTok
+
+Простой скрипт на Python для загрузки видео и музыки из TikTok с использованием сервиса SSSTik.
+
+![Пример изображения](tetrix.png)
